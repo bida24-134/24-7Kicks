@@ -108,7 +108,4 @@ main a[href^="mailto:"] {
     gap: 10px;
   }
 }
-main {
-  display: block !important;
-  color: white !important;
-}
+
