@@ -98,7 +98,6 @@ main a[href^="mailto:"] {
   border-radius: 5px;
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -108,4 +107,8 @@ main a[href^="mailto:"] {
     flex-direction: column;
     gap: 10px;
   }
+}
+main {
+  display: block !important;
+  color: white !important;
 }
