@@ -3,14 +3,72 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Iconic Threads</title>
-  <link rel="stylesheet" href="styles.css">
+ <title>24/7 Retro Store</title>
+ <style>
+  body {
+    background-color: #2C3539;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: black;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    display: inline;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+ </style>
+</head>
 <body>
 
 <header>
-  <h1 style="text-align:center; background-color:#3E4A4F;">Iconic Threads</h1>
+  <h1 style="text-align:center; background-color:black;">Welcome to 24/7 Retro Store!</h1>
   <nav class="navbar">
-    <div class="logo"><a href="#">Iconic Threads</a></div>
+    <div class="logo"><a href="#">24/7 Retro Store</a></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="Product.html">Products</a></li>
@@ -21,16 +79,15 @@
 </header>
 
 <main>
-  <p style="font-size: 150%;">"Timeless Football, Timeless Kits" - Iconic Threads.</p>
+  <p style="font-size: 150%;">We sell a wide range of retro football tees. We supply you with high-quality football tees from all over the world, from different teams and countries.</p>
   <p>Want to support your team or show off your style? Do it with us!</p>
   <p>Here's an example of the kits we sell:</p>
   <img src="ACMilanretro.jpg" width="400" height="400" alt="AC Milan Retro Kit">
   <p>Contact +26771558245 to learn more.</p>
 </main>
 
-<footer style="background-color:#2C3539" >
-
-  <p>&copy; Iconic Threads</p>
+<footer>
+  <p>&copy; 24-7Kicks</p>
 </footer>
 
 </body>
