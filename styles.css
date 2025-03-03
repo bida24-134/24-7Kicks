@@ -6,6 +6,13 @@ body {
  padding: 0;
  line-height: 1.6;
 }
+ .navbar {
+    background-color: #3E4A4F;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 header {
  background-color: #2C3539;
  color: white;
