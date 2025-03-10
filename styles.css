@@ -46,8 +46,6 @@ body {
     background-color: #444;
     border-radius: 5px;
 }
-
-/* Responsive Navbar */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -120,19 +118,15 @@ main a[href^="mailto:"] {
     color: #ff5722;
     font-weight: bold;
 }
-/* Product Grid for One-Line Layout */
+
 .product-grid {
   display: flex;
-  gap: 20px; /* Space between items */
-  justify-content: space-evenly; /* Ensures products are evenly spaced */
-  overflow-x: auto; /* Enables horizontal scrolling if needed */
+  gap: 20px; 
+  justify-content: space-evenly; 
+  overflow-x: auto; 
   padding: 20px;
 }
 
-/* Optional Styling for Scrollbar */
-.product-grid::-webkit-scrollbar {
-  height: 10px;
-}
 
 .product-grid::-webkit-scrollbar-thumb {
   background-color: #888;
@@ -143,10 +137,10 @@ main a[href^="mailto:"] {
   background-color: #555;
 }
 .product-card img {
-  width: 300px; /* Set a fixed width for all images */
-  height: 300px; /* Set a fixed height for uniformity */
-  object-fit: cover; /* Ensures the images maintain proportions within the box */
-  border-radius: 5px; /* Optional: Rounds the corners for a polished look */
+  width: 300px; 
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 5px; 
 }
 
 
