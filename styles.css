@@ -143,8 +143,8 @@ main a[href^="mailto:"] {
   background-color: #555;
 }
 .product-card img {
-  width: 150px; /* Set a fixed width for all images */
-  height: 150px; /* Set a fixed height for uniformity */
+  width: 300px; /* Set a fixed width for all images */
+  height: 300px; /* Set a fixed height for uniformity */
   object-fit: cover; /* Ensures the images maintain proportions within the box */
   border-radius: 5px; /* Optional: Rounds the corners for a polished look */
 }
