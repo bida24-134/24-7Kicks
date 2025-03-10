@@ -123,6 +123,7 @@ main a[href^="mailto:"] {
   display: flex;
   gap: 20px; 
   justify-content: space-evenly; 
+ overflow-x: auto;
   padding: 20px;
 }
 
