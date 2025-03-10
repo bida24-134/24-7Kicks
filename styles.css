@@ -195,3 +195,13 @@ h2 {
   transform: translateY(-5px); /* Lifts card on hover */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center them */
+  }
+
+  .product-card {
+    width: 90%; /* Allow cards to take most of the screen width */
+  }
+}
