@@ -103,15 +103,21 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-img {
-    border: 5px solid #2C3539;
-    border-radius: 10px;
-      width: 80%; 
-  max-width: 800px; 
-  height: auto; 
-  display: block;
-  margin: 20px auto;
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin: 10px 0;
 }
 
 main a[href^="mailto:"] {
