@@ -15,6 +15,10 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #444444; /* NEW: Subtle bottom border for separation */
+   position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
 }
 
 .logo a {
