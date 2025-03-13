@@ -1,133 +1,137 @@
 /* General Body Styling */
 body {
-  background: linear-gradient(135deg, #333333, #1c1c1c); /* Smooth grey gradient */
-  background-repeat: no-repeat; /* Prevents the gradient from repeating */
-  background-attachment: fixed; /* Makes the gradient stay in place during scroll */
-  color: #ffffff; /* White text for contrast */
-  font-family: 'Poppins', sans-serif; /* Clean and modern font */
-  margin: 0;
+    background: linear-gradient(135deg, #333333, #1c1c1c); /* Smooth grey gradient */
+    background-repeat: no-repeat; /* Prevents the gradient from repeating */
+    background-attachment: fixed; /* Keeps the gradient in place while scrolling */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    margin: 0;
 }
+
 /* Navbar Styling */
 .navbar {
-    background-color: #3E4A4F; /* Existing navbar background */
+    background-color: #3E4A4F; /* Dark grey navbar background */
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #444444; /* NEW: Subtle bottom border for separation */
-   position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure it stays above other content */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth*/
+    border-bottom: 1px solid #444444; /* Subtle bottom border for separation */
+    position: sticky; /* Sticks the navbar to the top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .logo a {
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* White text for the logo link */
+    font-size: 1.5em; /* Larger font for logo */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes the logo text bold */
 }
 
 .nav-links {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 20px;
+    display: flex; /* Aligns links horizontally */
+    gap: 20px; /* Adds spacing between links */
 }
 
 .nav-links li {
-    display: inline;
+    display: inline; /* Inline styling for list items */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    padding: 8px 12px;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text for links */
+    font-size: 1.1em; /* Slightly larger font for readability */
+    padding: 8px 12px; /* Adds padding for better click area */
     transition: 0.3s; /* Smooth transition for hover effect */
 }
 
 .nav-links a:hover {
-    background-color: #444; /* Highlighted background on hover */
-    border-radius: 5px;
-    color: #007bff; /* NEW: Add Bootstrap primary blue for hover */
+    background-color: #444; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners */
+    color: #007bff; /* Bootstrap primary blue for hover effect */
 }
 
+/* Active Link Styling */
+.nav-link.active {
+    color: #007bff; /* Highlight active link in blue */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Underline effect for active link */
+}
+
+/* Responsive Navbar Styling */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stacks items vertically on small screens */
+        text-align: center; /* Centers text */
     }
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stacks links vertically */
+        gap: 10px; /* Reduces gap for smaller screens */
     }
-.nav-link.active {
-  color: #007bff; /* Bootstrap primary blue */
-  font-weight: bold;
-  border-bottom: 2px solid #007bff; /* Underline effect */
 }
-
 
 /* Header Section Styling */
 header {
-    background-color: #222222; /* NEW: Slightly darker grey for contrast */
+    background-color: #222222; /* Slightly darker grey for contrast */
     color: white;
     padding: 20px;
     text-align: center;
-    border-radius: 10px; /* NEW: Rounded corners for modern look */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* NEW: Subtle shadow for depth */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header h1 {
-    margin: 0;
+    margin: 0; /* Removes default margin */
 }
 
 /* Main Content Area Styling */
 main {
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Limits content width for better readability */
+    margin: 0 auto; /* Centers the main content */
 }
 
 /* Product Grid Layout */
 .product-grid {
-    display: flex; /* Existing flexbox for layout */
-    flex-wrap: wrap; /* Ensures cards wrap to next row */
-    gap: 20px; /* Spacing between cards */
-    justify-content: center; /* Center aligns the grid */
+    display: flex; /* Flexbox layout for alignment */
+    flex-wrap: wrap; /* Allows items to wrap to next row */
+    gap: 20px; /* Spacing between grid items */
+    justify-content: center; /* Centers the grid content */
     padding: 20px;
 }
 
 /* Individual Product Card Styling */
 .product-card {
-    background-color: #292929; /* NEW: Mid-grey for cards */
+    background-color: #292929; /* Mid-grey card background */
     border-radius: 10px; /* Rounded corners */
-    text-align: center;
+    text-align: center; /* Centers content in the card */
     padding: 15px;
-    width: 250px; /* Fixed width for uniformity */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* NEW: Adds slight glowing effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* NEW: Smooth hover effects */
+    width: 250px; /* Fixed width for consistent sizing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
 .product-card:hover {
-    transform: scale(1.05); /* NEW: Slight zoom on hover */
-    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* NEW: Bright hover glow */
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* Bright hover glow */
 }
 
 /* Product Card Image Styling */
 .product-card img {
-    width: 100%; /* Ensures images fit card width */
-    height: 180px; /* Fixed height for consistency */
+    width: 100%; /* Makes images fit the card width */
+    height: 180px; /* Fixed height for consistent sizing */
     object-fit: cover; /* Ensures images are cropped uniformly */
-    border-radius: 5px; /* Rounded image corners */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
 /* Product Card Content Styling */
 .product-card h2 {
     font-size: 1.2em; /* Larger product titles */
-    margin: 10px 0;
+    margin: 10px 0; /* Spacing below titles */
 }
 
 .product-card p {
@@ -137,83 +141,7 @@ main {
 
 /* Button Styling */
 .product-card a {
-    background-color: #007bff; /* NEW: Primary blue for buttons */
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 20px; /* Rounded buttons */
-    transition: background-color 0.3s ease-in-out; /* NEW: Smooth hover effect */
-}
-
-.product-card a:hover {
-    background-color: #0056b3; /* NEW: Darker blue on hover */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333; /* Existing dark footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    font-size: 1.1em;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Intro Section Styling */
-.intro {
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-/* Responsive Product Grid for Smaller Screens */
-@media (max-width: 768px) {
-    .product-grid {
-        flex-direction: column; /* Stacks cards vertically */
-        align-items: center; /* Centers the cards */
-    }
-
-    .product-card {
-        width: 90%; /* Allows cards to take most of the screen width */
-    }
-}
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
+    background-color: #007bff; /* Primary blue for buttons */
+    color: #ffffff; /* White button text */
+    padding: 0.5rem 1rem; /* Adds padding inside buttons */
+    text
