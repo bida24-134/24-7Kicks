@@ -18,7 +18,7 @@ body {
    position: sticky;
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
-}
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth*/
 }
 
 .logo a {
