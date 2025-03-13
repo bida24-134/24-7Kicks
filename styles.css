@@ -1,233 +1,206 @@
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif; /* Sets a clean, professional font */
-    color: white; /* Makes text white for contrast against dark background */
-    background-color: #2C3539; /* Dark grey background for modern look */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    line-height: 1.6; /* Improves readability by spacing lines of text */
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #2C3539; /* Existing dark grey background */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #333333, #1c1c1c); /* NEW: Smooth grey gradient */
 }
 
-/* Navbar Container Styling */
+/* Navbar Styling */
 .navbar {
-    background-color: #3E4A4F; /* Dark grey navbar background */
-    padding: 15px 20px; /* Adds spacing inside navbar for better readability */
-    display: flex; /* Flexbox layout for horizontal alignment */
-    justify-content: space-between; /* Spreads content evenly */
-    align-items: center; /* Vertically aligns items in the navbar */
+    background-color: #3E4A4F; /* Existing navbar background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444444; /* NEW: Subtle bottom border for separation */
 }
 
-/* Logo Styling Inside Navbar */
 .logo a {
-    color: white; /* White logo text */
-    font-size: 1.5em; /* Larger size for prominence */
-    text-decoration: none; /* Removes underline from logo link */
-    font-weight: bold; /* Makes logo text bold */
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Navigation Links List Styling */
 .nav-links {
-    list-style: none; /* Removes default bullet points */
-    padding: 0; /* Removes padding inside the list */
-    margin: 0; /* Removes margin around the list */
-    display: flex; /* Flexbox layout for horizontal navigation */
-    gap: 20px; /* Spacing between navigation links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
-/* Individual Navigation Link Styling */
+.nav-links li {
+    display: inline;
+}
+
 .nav-links a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* White text for links */
-    font-size: 1.1em; /* Slightly larger text for better visibility */
-    padding: 8px 12px; /* Adds padding for a clickable area */
-    transition: 0.3s; /* Adds smooth transition for hover effect */
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    transition: 0.3s; /* Smooth transition for hover effect */
 }
 
-/* Hover Effect for Navigation Links */
 .nav-links a:hover {
-    background-color: #444; /* Darker grey background on hover */
-    border-radius: 5px; /* Rounded corners for hover effect */
+    background-color: #444; /* Highlighted background on hover */
+    border-radius: 5px;
+    color: #007bff; /* NEW: Add Bootstrap primary blue for hover */
 }
 
-/* Responsive Navbar Styling */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stacks navbar items vertically on small screens */
-        text-align: center; /* Centers text in small viewports */
+        flex-direction: column;
+        text-align: center;
     }
     .nav-links {
-        flex-direction: column; /* Stacks navigation links vertically */
-        gap: 10px; /* Adds spacing between links */
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
 /* Header Section Styling */
 header {
-    background-color: #2C3539; /* Matches the overall site background */
-    color: white; /* White text for contrast */
-    padding: 20px; /* Spacing inside the header */
-    text-align: center; /* Centers text in header */
+    background-color: #222222; /* NEW: Slightly darker grey for contrast */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* NEW: Rounded corners for modern look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* NEW: Subtle shadow for depth */
 }
 
-/* Header Title Styling */
 header h1 {
-    margin: 0; /* Removes default margin for header title */
+    margin: 0;
 }
 
 /* Main Content Area Styling */
 main {
-    padding: 20px; /* Adds spacing inside the main container */
-    max-width: 800px; /* Limits width for readability */
-    margin: 0 auto; /* Centers the main content block */
-}
-
-/* Main Content Images Styling */
-main img {
-    max-width: 100%; /* Ensures images don’t overflow their container */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Centers images if used with margin auto */
-    margin: 20px 0; /* Adds vertical spacing around images */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333; /* Dark footer for visual separation */
-    color: white; /* White text for readability */
-    text-align: center; /* Centers footer text */
-    padding: 10px; /* Adds vertical spacing in footer */
-    position: fixed; /* Sticks the footer to the bottom of the viewport */
-    bottom: 0; /* Ensures it’s aligned to the bottom */
-    width: 100%; /* Full-width footer */
-}
-
-/* Footer Text Styling */
-footer p {
-    font-size: 1.1em; /* Slightly larger text for emphasis */
-}
-
-/* Footer Link Styling */
-footer a {
-    color: white; /* White footer links */
-    text-decoration: none; /* Removes underline */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Adds underline on hover for clarity */
-}
-
-/* Intro Section Styling */
-.intro {
-    text-align: center; /* Centers the text */
-    padding: 40px 20px; /* Adds vertical and horizontal spacing */
-    max-width: 800px; /* Limits the section’s width */
-    margin: 0 auto; /* Centers the intro section */
-}
-
-/* Intro Title Styling */
-.intro h1 {
-    font-size: 2.5em; /* Larger title size */
-    margin-bottom: 10px; /* Adds spacing below the title */
-}
-
-/* Intro Text Paragraph Styling */
-.intro p {
-    font-size: 1.2em; /* Increases font size for readability */
-    margin: 10px 0; /* Adds vertical spacing between paragraphs */
-}
-
-/* Highlight Mailto Links */
-main a[href^="mailto:"] {
-    color: #ff5722; /* Bright orange for emphasis */
-    font-weight: bold; /* Bold for prominence */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Product Grid Layout */
 .product-grid {
-    display: flex; /* Flexbox for horizontal alignment */
-    gap: 20px; /* Adds space between grid items */
-    justify-content: space-evenly; /* Distributes items evenly */
-    overflow-x: auto; /* Ensures content is scrollable horizontally */
-    padding: 20px; /* Adds padding around the grid */
-}
-
-/* Product Card Images */
-.product-card img {
-    width: 300px; /* Fixed width for uniformity */
-    height: 300px; /* Fixed height */
-    object-fit: cover; /* Crops images uniformly */
-    border-radius: 5px; /* Rounds corners for modern look */
-}
-
-/* Section General Styling */
-section {
-    padding: 40px 20px; /* Adds consistent spacing */
-    text-align: center; /* Centers text within section */
-    margin: 20px auto; /* Centers the section block */
-}
-
-/* Section Headers */
-h2 {
-    font-size: 2em; /* Increases font size */
-    margin-bottom: 20px; /* Adds space below the header */
-}
-
-/* General Product Grid Layout */
-.product-grid {
-    display: flex; /* Flexbox for horizontal alignment */
-    flex-wrap: wrap; /* Ensures items wrap to next row */
-    gap: 20px; /* Adds spacing between grid items */
-    justify-content: center; /* Centers grid content */
-    padding: 20px; /* Adds padding around grid */
+    display: flex; /* Existing flexbox for layout */
+    flex-wrap: wrap; /* Ensures cards wrap to next row */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center aligns the grid */
+    padding: 20px;
 }
 
 /* Individual Product Card Styling */
 .product-card {
-    background-color: #f5f5f5; /* Light grey background */
-    border: 1px solid #ddd; /* Thin border */
-    border-radius: 10px; /* Smooth corners */
-    width: 250px; /* Uniform card size */
-    text-align: center; /* Centers content */
-    padding: 15px; /* Adds padding inside the card */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    background-color: #292929; /* NEW: Mid-grey for cards */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    padding: 15px;
+    width: 250px; /* Fixed width for uniformity */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* NEW: Adds slight glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* NEW: Smooth hover effects */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* NEW: Slight zoom on hover */
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* NEW: Bright hover glow */
 }
 
 /* Product Card Image Styling */
 .product-card img {
-    width: 100%; /* Makes image fill the card width */
-    height: 180px; /* Fixed height */
-    object-fit: cover; /* Ensures cropped images fit uniformly */
-    border-radius: 5px; /* Rounded corners for consistency */
+    width: 100%; /* Ensures images fit card width */
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images are cropped uniformly */
+    border-radius: 5px; /* Rounded image corners */
 }
 
 /* Product Card Content Styling */
 .product-card h2 {
-    font-size: 1.2em; /* Slightly larger font for headers */
-    margin: 10px 0; /* Adds space between title and content */
+    font-size: 1.2em; /* Larger product titles */
+    margin: 10px 0;
 }
 
 .product-card p {
-    margin: 5px 0; /* Adds vertical spacing */
-    font-size: 1em; /* Normal text size */
+    margin: 5px 0;
+    font-size: 1em; /* Standard paragraph size */
 }
 
-/* Hover Effects for Product Cards */
-.product-card:hover {
-    transform: translateY(-5px); /* Lifts card on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhances hover effect */
+/* Button Styling */
+.product-card a {
+    background-color: #007bff; /* NEW: Primary blue for buttons */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 20px; /* Rounded buttons */
+    transition: background-color 0.3s ease-in-out; /* NEW: Smooth hover effect */
+}
+
+.product-card a:hover {
+    background-color: #0056b3; /* NEW: Darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Existing dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Intro Section Styling */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
 /* Responsive Product Grid for Smaller Screens */
 @media (max-width: 768px) {
     .product-grid {
-        flex-direction: column; /* Stacks items vertically */
-        align-items: center; /* Centers them */
+        flex-direction: column; /* Stacks cards vertically */
+        align-items: center; /* Centers the cards */
     }
 
     .product-card {
-        width: 90%; /* Cards take most of the viewport width */
+        width: 90%; /* Allows cards to take most of the screen width */
     }
 }
+
+
+
+
+
+
  
 
 
