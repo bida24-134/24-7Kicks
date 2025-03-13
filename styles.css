@@ -59,7 +59,12 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+.nav-link.active {
+  color: #007bff; /* Bootstrap primary blue */
+  font-weight: bold;
+  border-bottom: 2px solid #007bff; /* Underline effect */
 }
+
 
 /* Header Section Styling */
 header {
