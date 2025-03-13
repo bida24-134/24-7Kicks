@@ -1,9 +1,9 @@
 /* General Body Styling */
-body {
-    background: linear-gradient(135deg, #333333, #1c1c1c); /* Smooth grey gradient */
-    background-repeat: no-repeat; /* Prevents the gradient from repeating */
+    body {
+    background: linear-gradient(45deg, #6e6e6e, #b0b0b0);
+    color: #fff; /* Ensures text is legible against the grey gradient */
+ background-repeat: no-repeat; /* Prevents the gradient from repeating */
     background-attachment: fixed; /* Keeps the gradient in place while scrolling */
-    color: #ffffff; /* White text for contrast */
     font-family: 'Poppins', sans-serif; /* Clean and modern font */
     margin: 0;
 }
