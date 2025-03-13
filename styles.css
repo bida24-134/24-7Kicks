@@ -1,9 +1,7 @@
 /* General Body Styling */
     body {
-    background: linear-gradient(45deg, #6e6e6e, #b0b0b0);
+    background-color: #1a1a1a; /* Matches the dark header color */
     color: #fff; /* Ensures text is legible against the grey gradient */
- background-repeat: no-repeat; /* Prevents the gradient from repeating */
-    background-attachment: fixed; /* Keeps the gradient in place while scrolling */
     font-family: 'Poppins', sans-serif; /* Clean and modern font */
     margin: 0;
 }
