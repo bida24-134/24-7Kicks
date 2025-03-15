@@ -147,24 +147,7 @@ main {
     color: #ffffff; /* White button text */
     padding: 0.5rem 1rem; /* Adds padding inside buttons */
     text
-.content-container {
-    display: flex; /* Align text and carousel side by side */
-    align-items: center; /* Vertically align text and carousel */
-    gap: 20px; /* Adds space between the text and the carousel */
-    margin: 20px; /* Adds padding around the content */
-}
-.text-left p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff4500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.5;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-align: left;
-}
+
 
 
 
