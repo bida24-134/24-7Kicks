@@ -151,11 +151,19 @@ main {
 }
 
 .text-left {
-    flex-basis: 40%; /* Adjusts the width of the text */
-    text-align: left; /* Ensures text aligns to the left */
-    color: #333; /* Optional: Makes text color more visible */
-    font-size: 1.2em; /* Optional: Adjust text size for emphasis */
-    line-height: 1.5; /* Optional: Enhances readability */
+    .text-left p {
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    font-size: 2em; /* Makes the text prominent */
+    font-weight: bold; /* Emphasizes the tagline */
+    color: #ff4500; /* A striking orange for vibrance, adjust as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    line-height: 1.5; /* Improves readability */
+    letter-spacing: 2px; /* Adds a touch of elegance */
+    text-transform: uppercase; /* Ensures consistent styling */
+    margin-bottom: 20px; /* Adds spacing beneath the text */
+    text-align: left; /* Aligns it to the left */
+}
+
 }
 
 #carouselExample {
