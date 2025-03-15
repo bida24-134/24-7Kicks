@@ -155,57 +155,54 @@ main {
     flex-basis: 60%; /* Adjusts the width of the carousel */
     max-width: 600px; /* Optional: Limits carousel width */
 }
-    .featured-kits {
-  background-color: #1a1a1a; /* Dark background for contrast */
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners for the container */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    .featured-kits .card {
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-kits .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.featured-kits .card img {
+    transition: transform 0.3s ease;
+}
+
+.featured-kits .card:hover img {
+    transform: scale(1.1);
+}
+
+.featured-kits .btn-primary {
+    border-radius: 25px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.featured-kits .btn-primary:hover {
+    background: linear-gradient(45deg, #0056b3, #007bff);
+    transform: translateY(-2px);
 }
 
 .featured-kits h2 {
-  color: #ff4500; /* Attention-grabbing title color */
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.card {
-  background-color: #292929; /* Dark card background */
-  border: none; /* Removes default border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Card shadow for depth */
-  overflow: hidden;
+.featured-kits .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #007bff;
+    transition: color 0.3s ease;
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover; /* Ensures images are cropped properly */
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff; /* White text for the title */
-}
-
-.card-text {
-  color: #ccc; /* Subtle text color */
-  font-size: 0.9rem; /* Slightly smaller text */
-}
-
-.card .btn {
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.card .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+.featured-kits .card-title:hover {
+    color: #0056b3;
 }
 
 
