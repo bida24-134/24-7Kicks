@@ -161,49 +161,88 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Main Content Styling */
+.main-content {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+}
+
+/* Section Heading */
+.featured-kits h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card Container */
+.featured-kits .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
 .featured-kits .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Card Image */
 .featured-kits .card img {
-    transition: transform 0.3s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    max-height: 200px;
 }
 
-.featured-kits .card:hover img {
-    transform: scale(1.1);
-}
-
-.featured-kits .btn-primary {
-    border-radius: 25px;
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    border: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.featured-kits .btn-primary:hover {
-    background: linear-gradient(45deg, #0056b3, #007bff);
-    transform: translateY(-2px);
-}
-
-.featured-kits h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Card Body */
+.featured-kits .card-body {
+    padding: 1rem;
 }
 
 .featured-kits .card-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin: 0.5rem 0;
+}
+
+.featured-kits .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.featured-kits .fw-bold {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.featured-kits .btn {
+    font-size: 0.9rem;
     font-weight: 600;
-    color: #007bff;
-    transition: color 0.3s ease;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
 }
 
-.featured-kits .card-title:hover {
-    color: #0056b3;
+.featured-kits .btn:hover {
+    background-color: #0056b3;
 }
 
-
-
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .featured-kits h2 {
+        font-size: 1.5rem;
+    }
+    .featured-kits .card img {
+        max-height: 150px;
+    }
+}
