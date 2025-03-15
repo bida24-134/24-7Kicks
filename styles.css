@@ -143,19 +143,24 @@ main {
     color: #ffffff; /* White button text */
     padding: 0.5rem 1rem; /* Adds padding inside buttons */
     text
-    .content-container {
-    display: flex; /* Aligns items horizontally */
-    align-items: center; /* Vertically centers text and carousel */
+.content-container {
+    display: flex; /* Align text and carousel side by side */
+    align-items: center; /* Vertically align text and carousel */
     gap: 20px; /* Adds space between the text and the carousel */
-    margin: 20px; /* Optional: Adds some space around the container */
+    margin: 20px; /* Adds padding around the content */
 }
 
 .text-left {
-    flex-basis: 30%; /* Optional: Sets the width of the text */
-    text-align: left;
+    flex-basis: 40%; /* Adjusts the width of the text */
+    text-align: left; /* Ensures text aligns to the left */
+    color: #333; /* Optional: Makes text color more visible */
+    font-size: 1.2em; /* Optional: Adjust text size for emphasis */
+    line-height: 1.5; /* Optional: Enhances readability */
 }
 
 #carouselExample {
-    flex-basis: 70%; /* Optional: Sets the width of the carousel */
+    flex-basis: 60%; /* Adjusts the width of the carousel */
+    max-width: 600px; /* Optional: Limits carousel width */
 }
+
 
