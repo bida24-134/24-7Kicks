@@ -150,7 +150,6 @@ main {
     margin: 20px; /* Adds padding around the content */
 }
 
-.text-left {
     .text-left p {
     font-family: 'Roboto', sans-serif; /* Modern and clean font */
     font-size: 2em; /* Makes the text prominent */
@@ -164,7 +163,6 @@ main {
     text-align: left; /* Aligns it to the left */
 }
 
-}
 
 #carouselExample {
     flex-basis: 60%; /* Adjusts the width of the carousel */
