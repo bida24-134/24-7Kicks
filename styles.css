@@ -155,9 +155,18 @@ main {
     flex-basis: 60%; /* Adjusts the width of the carousel */
     max-width: 600px; /* Optional: Limits carousel width */
 }
-   
-
-
-
-
+.feedback-btn {
+  background-color: #007BFF; /* Primary blue color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
+
+.feedback-btn:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
