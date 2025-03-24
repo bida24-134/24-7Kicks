@@ -1,6 +1,6 @@
 /* General Body Styling */
     body {
-    background-color: #1a1a1a; /* Matches the dark header color */
+    background-color: #1a1a1a !important;/* Matches the dark header color */
     color: #fff; /* Ensures text is legible against the grey gradient */
     font-family: 'Poppins', sans-serif; /* Clean and modern font */
     margin: 0;
