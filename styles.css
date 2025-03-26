@@ -74,6 +74,7 @@
         flex-direction: column; /* Stacks links vertically */
         gap: 10px; /* Reduces gap for smaller screens */
     }
+    
 }
 
 /* Header Section Styling */
@@ -224,3 +225,25 @@ td input{
 td a{
     color:#ff523b;
     font-size: 12px;
+}
+td img{
+width: 80px;
+    height:80px;
+    margin-right:10px;
+}
+    .total-price{
+    display: flex;
+    justify-content: flex-end;
+    }
+.total-price table{
+border-top: 3px solid #ff523b;
+width: 100%;
+max-width: 400px
+}
+td:last-child{
+    text-align:right;
+}
+    th:last-child{
+    text-align:right;
+}
+    
