@@ -46,39 +46,28 @@
 
     </header>
   <!---cart item details--->
-  <div class="small-container cart-page">
-    <table>
-       <tr>
-         <th>Product</th>
-         <th>Quantity</th>
-         <th>Sub-total</th>
-       </tr>
-      <tr>
-        <td>
-          <div class= "cart-info">
-            <img src="Auxerre 2002 Home.jpeg"
-            </div>
-            <div>
-            <p>Auxerre 2002 Home</p>
-              <small> Price P1800.00</small>
-              <br>
-              <a href="">Remove</a>
+    <div class="cart-container">
+  <div class="cart-item">
+    <img src="Auxerre 2002 Home.jpeg" alt="Auxerre 2002 Home">
+    <div class="item-details">
+      <h5>Auxerre 2002 Home</h5>
+      <p>Price: <strong>P1,800.00</strong></p>
+      <input type="number" value="1" min="1">
+      <button class="remove-btn">Remove</button>
+    </div>
+    <div class="item-subtotal">
+      <p><strong>P1,800.00</strong></p>
+    </div>
+  </div>
+</div>
+<div class="total-section">
+  <h4>Total: <strong>P1,800.00</strong></h4>
+  <button class="checkout-btn">Proceed to Checkout</button>
+</div>
+
 
               
-            </div>
-        </td>
-         <td><input type="number" value="1"></td>
-        <td>P1100</td>
-      </tr>
-      
-    </table>
-    <div class="total-price">
-
-    <table>
-      <tr>
-        <td>Total</td>
-        <td>P1800.00</td>
-      </tr>
+         
      
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
