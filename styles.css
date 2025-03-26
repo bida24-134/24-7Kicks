@@ -169,9 +169,28 @@ main {
 .feedback-btn:hover {
   background-color: #0056b3; /* Darker blue for hover effect */
 }
-    .carousel-inner img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
+    .carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust to your desired height */
+  background-color: beige; /* Matches the color in the uploaded image */
 }
 
+.carousel-inner img {
+  max-height: 100%; /* Ensures images fit within the carousel height */
+  max-width: 100%; /* Ensures images fit within the carousel width */
+  object-fit: contain; /* Makes the images visible without cropping */
+}
+
+.carousel {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for emphasis */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Match buttons to the design's sleek look */
+  border-radius: 50%;
+  padding: 10px;
+}
