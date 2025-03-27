@@ -119,19 +119,22 @@
       <button type="button" class="btn btn-primary add-to-cart" data-name="Inter Milan 1996" data-price="1110">
   <i class="bi bi-cart-plus"></i>
 </button>
-<!-- Cart Side Menu -->
-<div id="cartMenu" class="cart-menu">
-  <h2>Your Cart</h2>
-  <ul id="cart-items"></ul>
-  <p>Total: P<span id="cart-total">0.00</span></p>
-  <button class="close-cart" onclick="closeCart()">Close</button>
-</div>
+<!-- Side Cart Menu (HTML structure) -->
+    <div id="cartMenu" class="cart-menu">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: P<span id="cart-total">0.00</span></p>
+            <button class="btn btn-checkout">Checkout</button>
+            <button class="btn btn-close-cart" onclick="closeCart()">Close Cart</button>
+        </div>
+    </div>
 
-<!-- Overlay (Optional, for better UX) -->
-<div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
 
-<!-- Button to Open Cart -->
-<button class="open-cart" onclick="openCart()">View Cart</button>
+    <button id="openCartBtn" class="btn-open-cart" onclick="openCart()">
+        View Cart (<span id="cart-count">0</span>)
+    </button>
      
       
     </main>
