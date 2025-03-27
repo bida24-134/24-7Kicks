@@ -119,12 +119,19 @@
       <button type="button" class="btn btn-primary add-to-cart" data-name="Inter Milan 1996" data-price="1110">
   <i class="bi bi-cart-plus"></i>
 </button>
-         </div>
-      <div id="cart" class="cart-container">
+<!-- Cart Side Menu -->
+<div id="cartMenu" class="cart-menu">
   <h2>Your Cart</h2>
   <ul id="cart-items"></ul>
   <p>Total: P<span id="cart-total">0.00</span></p>
+  <button class="close-cart" onclick="closeCart()">Close</button>
 </div>
+
+<!-- Overlay (Optional, for better UX) -->
+<div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+
+<!-- Button to Open Cart -->
+<button class="open-cart" onclick="openCart()">View Cart</button>
      
       
     </main>
