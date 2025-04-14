@@ -7,7 +7,7 @@
 }
 
 /* Navbar Styling */
-.navbar {
+.navbar navbar-expand-lg bg-light{
     background-color: #3E4A4F!important; /* Dark grey navbar background */
     padding: 15px 20px;
     display: flex;
