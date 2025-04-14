@@ -48,7 +48,7 @@
 
     <main class="product-grid">
       <div class="product-card">
-        <img src="Auxerre 2002 Home.jpeg" alt="Auxerre 2002 Home Kit">
+        <img src="images/Auxerre 2002 Home.jpeg" alt="Auxerre 2002 Home Kit">
         <h2>Auxerre 2002 Home Kit</h2>
         <p>Price: P1,800.00</p>
         <p>Status: In Stock</p>
@@ -57,7 +57,7 @@
 </button>
       </div>
       <div class="product-card">
-        <img src="Portugal 06-08.webp" alt="Portugal Retro Kit 2006-2008">
+        <img src="images/Portugal 06-08.webp" alt="Portugal Retro Kit 2006-2008">
         <h2>Portugal 2006-2008 Retro Kit</h2>
         <p>Price: P1,500.00</p>
         <p>Status: In Stock</p>
@@ -66,7 +66,7 @@
 </button>
       </div>
       <div class="product-card">
-        <img src="West Germany 1988-90.webp" alt="West Germany Retro Kit">
+        <img src="images/West Germany 1988-90.webp" alt="West Germany Retro Kit">
         <h2>West Germany 1988-99</h2>
         <p>Price: P1,600.00</p>
         <p>Status: Sold Out</p>
@@ -76,7 +76,7 @@
       </div>
       <!-- New Kits -->
       <div class="product-card">
-        <img src="West Ham United 1999.jpeg" alt="West Ham United 1999 Kit">
+        <img src="images/West Ham United 1999.jpeg" alt="West Ham United 1999 Kit">
         <h2>West Ham United 1999 Kit</h2>
         <p>Price: P1,400.00</p>
         <p>Status: In Stock</p>
@@ -85,7 +85,7 @@
 </button>
       </div>
       <div class="product-card">
-        <img src="04-05 Real Madrid.webp" alt="2004-2005 Real Madrid Kit">
+        <img src="images/04-05 Real Madrid.webp" alt="2004-2005 Real Madrid Kit">
         <h2>2004-2005 Real Madrid Kit</h2>
         <p>Price: P1,700.00</p>
         <p>Status: Limited Stock</p>
@@ -94,7 +94,7 @@
 </button>
       </div>
       <div class="product-card">
-        <img src="Man United 1995.webp" alt="Manchester United 1995 Kit">
+        <img src="images/Man United 1995.webp" alt="Manchester United 1995 Kit">
         <h2>Manchester United 1995 Kit</h2>
         <p>Price: P1,600.00</p>
         <p>Status: In Stock</p>
@@ -103,7 +103,7 @@
 </button>
       </div>
        <div class="product-card">
-        <img src="ACMilanretro.jpg" alt="AC Milan Retro">
+        <img src="images/ACMilanretro.jpg" alt="AC Milan Retro">
         <h2>AC Milan 07-08</h2>
         <p>Price: P1,300.00</p>
         <p>Status: In Stock</p>
@@ -112,7 +112,7 @@
 </button>
          </div>
       <div class="product-card">
-        <img src="Inter 1996.webp" alt="Inter Milan Away">
+        <img src="images/Inter 1996.webp" alt="Inter Milan Away">
         <h2>Inter Milan 1996 Away</h2>
         <p>Price: P1,110.00</p>
         <p>Status: In Stock</p>
@@ -140,109 +140,6 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-   <script>
-// Initialize an empty cart array to store selected items
-let cart = [];
-
-// Function to add an item to the cart
-function addToCart(event) {
-    // Find the closest add-to-cart button that was clicked
-    const button = event.target.closest('.add-to-cart');
-    
-    // Extract the item name and price from data attributes
-    const itemName = button.getAttribute('data-name');
-    const itemPrice = parseFloat(button.getAttribute('data-price'));
-
-    // Check if the item is already in the cart
-    const existingItem = cart.find(item => item.name === itemName);
-    
-    if (existingItem) {
-        // If item exists, increase its quantity
-        existingItem.quantity += 1;
-    } else {
-        // If item is new, add it to the cart with quantity 1
-        cart.push({ name: itemName, price: itemPrice, quantity: 1 });
-    }
-
-    // Update the cart display and open the cart menu
-    updateCartDisplay();
-    openCart();
-}
-
-// Function to remove an item from the cart by its index
-function removeFromCart(index) {
-    // Remove the item at the specified index
-    cart.splice(index, 1);
-    
-    // Update the cart display to reflect the removal
-    updateCartDisplay();
-}
-
-// Function to update the visual representation of the cart
-function updateCartDisplay() {
-    // Get references to key DOM elements
-    const cartItemsContainer = document.getElementById('cart-items');
-    const cartTotalContainer = document.getElementById('cart-total');
-    const cartCountContainer = document.getElementById('cart-count');
-
-    // Clear existing cart items
-    cartItemsContainer.innerHTML = '';
-    
-    // Initialize total price
-    let total = 0;
-
-    // Iterate through each item in the cart
-    cart.forEach((item, index) => {
-        // Create a new div for each cart item
-        const cartItemDiv = document.createElement('div');
-        cartItemDiv.classList.add('cart-item');
-        
-        // Populate the div with item details and a remove button
-        cartItemDiv.innerHTML = `
-            <span>${item.name} x ${item.quantity}</span>
-            <span>P${(item.price * item.quantity).toFixed(2)} 
-                <span class="remove-item" onclick="removeFromCart(${index})">🗑️</span>
-            </span>
-        `;
-        
-        // Add the item div to the cart items container
-        cartItemsContainer.appendChild(cartItemDiv);
-        
-        // Calculate the total price
-        total += item.price * item.quantity;
-    });
-
-    // Update the total price display (formatted to 2 decimal places)
-    cartTotalContainer.textContent = total.toFixed(2);
-    
-    // Update the item count display
-    cartCountContainer.textContent = cart.length;
-}
-
-// Function to open the cart menu
-function openCart() {
-    // Add 'open' class to slide in the cart menu
-    document.getElementById('cartMenu').classList.add('open');
-    
-    // Add 'active' class to show the overlay
-    document.getElementById('cartOverlay').classList.add('active');
-}
-
-// Function to close the cart menu
-function closeCart() {
-    // Remove 'open' class to slide out the cart menu
-    document.getElementById('cartMenu').classList.remove('open');
-    
-    // Remove 'active' class to hide the overlay
-    document.getElementById('cartOverlay').classList.remove('active');
-}
-
-// Add click event listeners to all "Add to Cart" buttons
-// This ensures that clicking the button will trigger the addToCart function
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', addToCart);
-});
-</script>
 
 
   </body>
