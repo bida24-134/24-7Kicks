@@ -21,6 +21,7 @@
      font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     backdrop-filter: blur(10px); /* Adds blur to the background */
+    color:white
 }
 
 .logo a {
