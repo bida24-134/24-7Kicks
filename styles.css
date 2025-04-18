@@ -250,14 +250,14 @@ background-color: #2a2a2a;
 .card-text {
   flex-grow: 1;                 /* Allow text to take available space */
   font-size: 0.95rem;           /* Consistent text size */
-  color: #6c757d;               /* Muted text color */
+    color: #b0b0b0; 
   margin-bottom: 0.75rem;       /* Space below text */
 }
 
 /* Price display */
 .price {
   font-size: 1.2rem;            /* Larger font for price */
-  color: #dc3545;               /* Highlight color for price */
+  color: #b0b0b0; 
   margin-bottom: 1rem;          /* Space below price */
 }
 
