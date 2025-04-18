@@ -179,9 +179,9 @@ main {
 }
 
 .carousel-inner img {
-  max-height: 100%; /* Ensures images fit within the carousel height */
-  max-width: 100%; /* Ensures images fit within the carousel width */
   object-fit: contain; /* Makes the images visible without cropping */
+  max-width: 600px; /* Restricts max width */
+  max-height: 400px; /* Restricts max height */
 }
 .carousel-item img {
   width: 100%; /* Makes images responsive */
