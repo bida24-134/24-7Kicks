@@ -183,7 +183,12 @@ main {
   max-width: 100%; /* Ensures images fit within the carousel width */
   object-fit: contain; /* Makes the images visible without cropping */
 }
-
+.carousel-item img {
+  width: 100%; /* Makes images responsive */
+  max-width: 600px; /* Restricts max width */
+  max-height: 400px; /* Restricts max height */
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+}
 .carousel {
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for emphasis */
