@@ -164,14 +164,6 @@ main {
   background-color: #0056b3; /* Darker blue for hover effect */
 }
 
-    .d-block.w-100 {
-  max-height: 500px; /* Set your desired max height */
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* This ensures the images maintain their aspect ratio */
-  margin: 0 auto; /* This centers the images horizontally */
-}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: black; /* Match buttons to the design's sleek look */
