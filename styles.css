@@ -97,6 +97,82 @@ main {
     max-width: 800px; /* Limits content width for better readability */
     margin: 0 auto; /* Centers the main content */
 }
+/* Carousel container styling */
+.carousel.slide {
+  margin-bottom: 3rem;          /* Add space below the carousel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  border-radius: 8px;           /* Rounded corners */
+  overflow: hidden;             /* Ensure content doesn't break the rounded corners */
+}
+
+/* Carousel inner container */
+.carousel-inner {
+  position: relative;           /* Required for positioning carousel items */
+  width: 100%;                  /* Takes full width of parent */
+}
+
+/* Carousel item styling */
+.carousel-item {
+  position: relative;           /* For positioning content inside if needed */
+  display: none;                /* Hide items by default */
+  transition: transform 0.6s ease-in-out;  /* Smooth transition between slides */
+}
+
+.carousel-item.active {
+  display: block;               /* Only show active slide */
+}
+
+/* Image styling for uniform dimensions */
+.d-block.w-100 {
+  max-height: 500px;            /* Uniform maximum height for all images */
+  width: 100%;                  /* Take full width of container */
+  height: auto;                 /* Maintain aspect ratio */
+  object-fit: contain;          /* Ensure entire image is visible without cropping */
+  background-color: #f8f9fa;    /* Light background for images with transparency */
+}
+
+/* Navigation controls styling */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;           /* Position controls on top of carousel */
+  top: 0;                       /* Align to top */
+  bottom: 0;                    /* Extend to bottom */
+  width: 15%;                   /* Width of click area */
+  opacity: 0.5;                 /* Semi-transparent by default */
+  transition: opacity 0.15s ease;  /* Smooth hover effect */
+  background: none;             /* Remove background */
+  border: none;                 /* Remove border */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.9;                 /* More visible on hover */
+}
+
+.carousel-control-prev {
+  left: 0;                      /* Position at left edge */
+}
+
+.carousel-control-next {
+  right: 0;                     /* Position at right edge */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;        /* Required for dimensions */
+  width: 20px;                  /* Icon width */
+  height: 20px;                 /* Icon height */
+  background-repeat: no-repeat;  /* Prevent icon from repeating */
+  background-position: 50%;     /* Center icon */
+  background-size: 100% 100%;   /* Make icon fill the element */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .d-block.w-100 {
+    max-height: 350px;          /* Smaller height on mobile devices */
+  }
+}
 
 /* Product Grid Layout */
 .product-grid {
@@ -162,14 +238,7 @@ main {
 
 .feedback-btn:hover {
   background-color: #0056b3; /* Darker blue for hover effect */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black; /* Match buttons to the design's sleek look */
-  border-radius: 50%;
-  padding: 10px;
-}
+    
  /* Dark Theme Cart Styles */
         .cart-menu {
             position: fixed;
