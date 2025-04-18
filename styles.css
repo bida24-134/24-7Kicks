@@ -154,7 +154,7 @@ main {
 
 #carouselExample {
     flex-basis: 60%; /* Adjusts the width of the carousel */
-    max-width: 600px; /* Optional: Limits carousel width */
+
 }
 .feedback-btn {
   background-color: #007BFF; /* Primary blue color */
