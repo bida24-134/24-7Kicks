@@ -173,6 +173,127 @@ main {
     max-height: 350px;          /* Smaller height on mobile devices */
   }
 }
+/* Featured Kits Section Styling */
+.featured-kits {
+  background-color: #f8f9fa;    /* Light background for the section */
+  padding: 3rem 0;              /* Additional vertical padding (reinforces the py-5 class) */
+}
+
+/* Section heading */
+.featured-kits h2 {
+  font-weight: 700;             /* Bold heading */
+  color: #212529;               /* Dark text color */
+  margin-bottom: 2rem;          /* Space below heading */
+}
+
+/* Product card styling */
+.kit-card {
+  height: 100%;                 /* Make all cards take full height of their container */
+  transition: transform 0.3s, box-shadow 0.3s;  /* Smooth hover effects */
+  border-radius: 8px;           /* Rounded corners */
+  overflow: hidden;             /* Ensure content respects border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.kit-card:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Image container - critical for uniform height */
+.kit-card-img {
+  height: 300px;                /* Fixed height for all image containers */
+  display: flex;                /* Enable flexbox for centering */
+  align-items: center;          /* Center image vertically */
+  justify-content: center;      /* Center image horizontally */
+  background-color: #ffffff;    /* White background for images */
+  overflow: hidden;             /* Hide overflow if image is larger */
+}
+
+/* Product image styling */
+.card-img-top {
+  max-height: 280px;            /* Slightly smaller than container to prevent touching edges */
+  max-width: 100%;              /* Respect container width */
+  width: auto;                  /* Allow natural width based on height constraint */
+  height: auto;                 /* Maintain aspect ratio */
+  object-fit: contain;          /* Show full image without cropping */
+  transition: transform 0.3s;   /* Smooth zoom effect on hover */
+}
+
+.kit-card:hover .card-img-top {
+  transform: scale(1.05);       /* Subtle zoom on hover */
+}
+
+/* Card body content */
+.card-body {
+  height: 230px;                /* Fixed height for card content */
+  display: flex;                /* Enable flexbox for layout */
+  flex-direction: column;       /* Stack content vertically */
+  padding: 1.25rem;             /* Uniform padding */
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.25rem;           /* Consistent title size */
+  font-weight: 600;             /* Semi-bold title */
+  margin-bottom: 0.75rem;       /* Space below title */
+  color: #212529;               /* Dark text color */
+}
+
+/* Product description */
+.card-text {
+  flex-grow: 1;                 /* Allow text to take available space */
+  font-size: 0.95rem;           /* Consistent text size */
+  color: #6c757d;               /* Muted text color */
+  margin-bottom: 0.75rem;       /* Space below text */
+}
+
+/* Price display */
+.price {
+  font-size: 1.2rem;            /* Larger font for price */
+  color: #dc3545;               /* Highlight color for price */
+  margin-bottom: 1rem;          /* Space below price */
+}
+
+/* Call-to-action button */
+.btn-primary {
+  background-color: #0d6efd;    /* Button color */
+  border: none;                 /* Remove border */
+  padding: 0.5rem 1rem;         /* Button padding */
+  border-radius: 4px;           /* Slightly rounded corners */
+  transition: background-color 0.2s;  /* Smooth color transition */
+  font-weight: 500;             /* Medium weight text */
+  align-self: flex-start;       /* Align button to the left */
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;    /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .kit-card-img {
+    height: 250px;              /* Smaller height on medium screens */
+  }
+  
+  .card-img-top {
+    max-height: 230px;          /* Adjust image height for medium screens */
+  }
+  
+  .card-body {
+    height: 250px;              /* Slightly taller to accommodate text wrapping */
+  }
+}
+
+@media (max-width: 576px) {
+  .kit-card-img {
+    height: 220px;              /* Even smaller height on mobile */
+  }
+  
+  .card-img-top {
+    max-height: 200px;          /* Adjusted image height for mobile */
+  }
+}
 
 /* Product Grid Layout */
 .product-grid {
