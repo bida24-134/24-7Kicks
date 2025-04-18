@@ -97,12 +97,13 @@ main {
     max-width: 800px; /* Limits content width for better readability */
     margin: 0 auto; /* Centers the main content */
 }
-/* Carousel container styling */
+/* Carousel container styling - blending with gray background */
 .carousel.slide {
   margin-bottom: 3rem;          /* Add space below the carousel */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Slightly darker shadow for contrast */
   border-radius: 8px;           /* Rounded corners */
   overflow: hidden;             /* Ensure content doesn't break the rounded corners */
+  background-color: #2a2a2a;    /* Dark gray background to blend with site */
 }
 
 /* Carousel inner container */
@@ -128,7 +129,7 @@ main {
   width: 100%;                  /* Take full width of container */
   height: auto;                 /* Maintain aspect ratio */
   object-fit: contain;          /* Ensure entire image is visible without cropping */
-  background-color: #f8f9fa;    /* Light background for images with transparency */
+  background-color: #333;       /* Dark background for images to blend with site theme */
 }
 
 /* Navigation controls styling */
@@ -138,7 +139,7 @@ main {
   top: 0;                       /* Align to top */
   bottom: 0;                    /* Extend to bottom */
   width: 15%;                   /* Width of click area */
-  opacity: 0.5;                 /* Semi-transparent by default */
+  opacity: 0.7;                 /* More visible on dark background */
   transition: opacity 0.15s ease;  /* Smooth hover effect */
   background: none;             /* Remove background */
   border: none;                 /* Remove border */
@@ -146,7 +147,7 @@ main {
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  opacity: 0.9;                 /* More visible on hover */
+  opacity: 1;                   /* Fully visible on hover */
 }
 
 .carousel-control-prev {
@@ -165,6 +166,7 @@ main {
   background-repeat: no-repeat;  /* Prevent icon from repeating */
   background-position: 50%;     /* Center icon */
   background-size: 100% 100%;   /* Make icon fill the element */
+  filter: brightness(1.3);      /* Make icons brighter against dark background */
 }
 
 /* Responsive adjustments */
@@ -173,16 +175,18 @@ main {
     max-height: 350px;          /* Smaller height on mobile devices */
   }
 }
+}
 /* Featured Kits Section Styling */
 .featured-kits {
-  background-color: #f8f9fa;    /* Light background for the section */
-  padding: 3rem 0;              /* Additional vertical padding (reinforces the py-5 class) */
+ background-color: #1c1c1c;    /* Match the dark background from screenshot */
+  padding: 3rem 0;              /* Additional vertical padding */
+  color: #e0e0e0;               /* Light text color for dark background */
 }
 
 /* Section heading */
 .featured-kits h2 {
-  font-weight: 700;             /* Bold heading */
-  color: #212529;               /* Dark text color */
+  font-weight: 700; /* Bold heading */
+color: #ffffff; 
   margin-bottom: 2rem;          /* Space below heading */
 }
 
@@ -193,6 +197,7 @@ main {
   border-radius: 8px;           /* Rounded corners */
   overflow: hidden;             /* Ensure content respects border radius */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+background-color: #2a2a2a;
 }
 
 .kit-card:hover {
@@ -206,7 +211,7 @@ main {
   display: flex;                /* Enable flexbox for centering */
   align-items: center;          /* Center image vertically */
   justify-content: center;      /* Center image horizontally */
-  background-color: #ffffff;    /* White background for images */
+   background-color: #333;  
   overflow: hidden;             /* Hide overflow if image is larger */
 }
 
@@ -230,6 +235,7 @@ main {
   display: flex;                /* Enable flexbox for layout */
   flex-direction: column;       /* Stack content vertically */
   padding: 1.25rem;             /* Uniform padding */
+ background-color: #2a2a2a;    /* Match card background */
 }
 
 /* Card title */
@@ -237,7 +243,7 @@ main {
   font-size: 1.25rem;           /* Consistent title size */
   font-weight: 600;             /* Semi-bold title */
   margin-bottom: 0.75rem;       /* Space below title */
-  color: #212529;               /* Dark text color */
+  color: #ffffff;               /* White text for dark theme */
 }
 
 /* Product description */
