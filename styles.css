@@ -197,7 +197,7 @@ color: white;
   border-radius: 8px;           /* Rounded corners */
   overflow: hidden;             /* Ensure content respects border radius */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-background-color: #2a2a2a;
+background-color:#1a1a1a ;
 }
 
 .kit-card:hover {
@@ -235,7 +235,7 @@ background-color: #2a2a2a;
   display: flex;                /* Enable flexbox for layout */
   flex-direction: column;       /* Stack content vertically */
   padding: 1.25rem;             /* Uniform padding */
- background-color: white;    /* Match card background */
+ background-color: #1a1a1a;    /* Match card background */
 }
 
 /* Card title */
@@ -257,7 +257,7 @@ background-color: #2a2a2a;
 /* Price display */
 .price {
   font-size: 1.2rem;            /* Larger font for price */
-  color: white;
+  color: black;
   margin-bottom: 1rem;          /* Space below price */
 }
 
