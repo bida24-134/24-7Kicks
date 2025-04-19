@@ -243,7 +243,7 @@ main {
   font-size: 1.25rem;           /* Consistent title size */
   font-weight: 600;             /* Semi-bold title */
   margin-bottom: 0.75rem;       /* Space below title */
-  color: #ffffff;               /* White text for dark theme */
+  color: white;               /* White text for dark theme */
 }
 
 /* Product description */
