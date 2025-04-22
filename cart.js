@@ -6,15 +6,26 @@ const cart = () => {
     let iconCartSpan = iconCart.querySelector('span');
     let body = document.querySelector('body');
     let closeCart = document.querySelector('.close');
+    let cartFooter = document.querySelector('.cart-footer');
     let cart = [];
     
-    // open and close tab
+    // Open and close cart sidebar
     iconCart.addEventListener('click', () => {
         body.classList.toggle('activeTabCart');
-    })
+    });
+    
     closeCart.addEventListener('click', () => {
         body.classList.toggle('activeTabCart');
-    })
+    });
+    
+    // Click outside to close
+    document.addEventListener('click', (e) => {
+        if (body.classList.contains('activeTabCart') && 
+            !e.target.closest('.cartTab') && 
+            !e.target.closest('.icon-cart')) {
+            body.classList.remove('activeTabCart');
+        }
+    });
     
     const setProductInCart = (idProduct, value) => {
         let positionThisProductInCart = cart.findIndex((value) => value.product_id == idProduct);
@@ -39,7 +50,7 @@ const cart = () => {
         
         if(cart.length > 0){
             cart.forEach(item => {
-                totalQuantity = totalQuantity + item.quantity;
+                totalQuantity += item.quantity;
                 let newItem = document.createElement('div');
                 newItem.classList.add('item');
                 newItem.dataset.id = item.product_id;
@@ -51,38 +62,39 @@ const cart = () => {
                 let itemTotal = info.price * item.quantity;
                 totalPrice += itemTotal;
                 
-                listCartHTML.appendChild(newItem);
                 newItem.innerHTML = `
-                <div class="image">
-                    <img src="${info.image}">
-                </div>
-                <div class="name">
-                    ${info.name}
-                </div>
-                <div class="totalPrice">₱${itemTotal.toFixed(2)}</div>
-                <div class="quantity">
-                    <span class="minus" data-id="${info.id}">-</span>
-                    <span>${item.quantity}</span>
-                    <span class="plus" data-id="${info.id}">+</span>
-                </div>
+                    <div class="image">
+                        <img src="${info.image}" alt="${info.name}">
+                    </div>
+                    <div class="info">
+                        <div class="name">${info.name}</div>
+                        <div class="price">₱${info.price.toFixed(2)}</div>
+                        <div class="quantity">
+                            <span class="minus" data-id="${info.id}">-</span>
+                            <span class="count">${item.quantity}</span>
+                            <span class="plus" data-id="${info.id}">+</span>
+                        </div>
+                    </div>
                 `;
+                
+                listCartHTML.appendChild(newItem);
             });
             
-            // Add cart summary with total price
-            const summaryElement = document.createElement('div');
-            summaryElement.classList.add('cart-summary');
-            summaryElement.innerHTML = `
+            // Update cart footer with total
+            cartFooter.innerHTML = `
                 <div class="cart-total">
-                    <strong>Total: ₱${totalPrice.toFixed(2)}</strong>
+                    <span>Total:</span>
+                    <span>₱${totalPrice.toFixed(2)}</span>
                 </div>
                 <div class="checkout-btn">
-                    <button>Proceed to Checkout</button>
+                    <button>Checkout</button>
                 </div>
             `;
-            listCartHTML.appendChild(summaryElement);
+            cartFooter.style.display = 'block';
         } else {
             // Show empty cart message
             listCartHTML.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+            cartFooter.style.display = 'none';
         }
         
         iconCartSpan.innerText = totalQuantity;
@@ -91,34 +103,47 @@ const cart = () => {
     document.addEventListener('click', (event) => {
         let buttonClick = event.target;
         let idProduct = buttonClick.dataset.id;
-        let quantity = null;
         
         if (idProduct) {
             let positionProductInCart = cart.findIndex((value) => value.product_id == idProduct);
             
             switch (true) {
                 case (buttonClick.classList.contains('add-to-cart')):
-                    quantity = (positionProductInCart < 0) ? 1 : cart[positionProductInCart].quantity+1;
+                    // Show a small animation when adding to cart
+                    buttonClick.classList.add('adding');
+                    setTimeout(() => {
+                        buttonClick.classList.remove('adding');
+                    }, 500);
+                    
+                    quantity = (positionProductInCart < 0) ? 1 : cart[positionProductInCart].quantity + 1;
                     setProductInCart(idProduct, quantity);
+                    
+                    // Open cart when adding an item
+                    body.classList.add('activeTabCart');
                     break;
+                    
                 case (buttonClick.classList.contains('minus')):
-                    quantity = cart[positionProductInCart].quantity-1;
+                    quantity = cart[positionProductInCart].quantity - 1;
                     setProductInCart(idProduct, quantity);
                     break;
+                    
                 case (buttonClick.classList.contains('plus')):
-                    quantity = cart[positionProductInCart].quantity+1;
+                    quantity = cart[positionProductInCart].quantity + 1;
                     setProductInCart(idProduct, quantity);
                     break;
+                    
                 default:
                     break;
             }
         }
-    })
+    });
     
     const initApp = () => {
         if(localStorage.getItem('cart')){
             cart = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
+        } else {
+            addCartToHTML(); // Initialize empty cart display
         }
     }
     
@@ -126,3 +151,7 @@ const cart = () => {
 }
 
 export default cart;
+         
+             
+           
+                   
