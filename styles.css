@@ -94,9 +94,7 @@ header h1 {
 /* Main Content Area Styling */
 main {
     padding: 20px;
-    max-width: 800px; /* Limits content width for better readability */
-    margin: 0 auto; /* Centers the main content */
-}
+    
 /* Carousel container styling - blending with gray background */
 .carousel.slide {
   margin-bottom: 3rem;          /* Add space below the carousel */
