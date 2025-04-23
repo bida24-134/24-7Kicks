@@ -175,8 +175,7 @@ main {
 /* Featured Kits Section Styling */
 .featured-kits {
  background-color: #1c1c1c;    /* Match the dark background from screenshot */
-  padding: 3rem 0;              /* Additional vertical padding */
-  color: #e0e0e0;               /* Light text color for dark background */
+
 }
 
 /* Section heading */
@@ -239,7 +238,7 @@ main {
   font-size: 1.25rem;           /* Consistent title size */
   font-weight: 600;             /* Semi-bold title */
   margin-bottom: 0.75rem;       /* Space below title */
-  color: white;               /* White text for dark theme */
+               /* White text for dark theme */
 }
 
 /* Product description */
