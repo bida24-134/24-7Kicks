@@ -233,12 +233,6 @@ main {
   background-color: #1a1a1a;    /* Match card background */
 }
 
-/* Card title */
-.card-title {
-  font-size: 1.25rem;           /* Consistent title size */
-  font-weight: 600;             /* Semi-bold title */
-  margin-bottom: 0.75rem;       /* Space below title */
-}
 
 /* Product description */
 .card-text {
