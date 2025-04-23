@@ -8,7 +8,6 @@
 
 /* Navbar Styling */
 .navbar{
-    background-color: #34495E; /* Dark grey navbar background */
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
