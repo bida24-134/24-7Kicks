@@ -232,7 +232,7 @@ main {
   padding: 1.25rem;             /* Uniform padding */
   background-color: #1a1a1a;    /* Match card background */
 }
-.card-title h5{
+.card-title{
     color:white;
 }
 
