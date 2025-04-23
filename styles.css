@@ -232,13 +232,13 @@ main {
   padding: 1.25rem;             /* Uniform padding */
   background-color: #1a1a1a;    /* Match card background */
 }
-.card-title{
+.card-title h5{
     color:white;
 }
 
 
 /* Product description */
-.card-text h5 {
+.card-text {
   flex-grow: 1;                 /* Allow text to take available space */
   font-size: 0.95rem;           /* Consistent text size */
   color: white; 
