@@ -1,355 +1,252 @@
-/* General Body Styling */
-    body {
-    background-color: #1a1a1a !important;/* Matches the dark header color */
-    color: #fff !important; /* Ensures text is legible against the grey gradient */
-    font-family: 'Poppins', sans-serif; /* Clean and modern font */
-    margin: 0;
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap');
+
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Navbar Styling */
-.navbar{
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #444444; /* Subtle bottom border for separation */
-    position: sticky; /* Sticks the navbar to the top */
-    top: 0;
-    z-index: 1000; /* Ensures it stays above other content */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    backdrop-filter: blur(10px); /* Adds blur to the background */
-    color:white
-}
-
-.logo a {
-    color: white; /* White text for the logo link */
-    font-size: 1.5em; /* Larger font for logo */
-    text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Makes the logo text bold */
-}
-
-.nav-links {
-    list-style: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Aligns links horizontally */
-    gap: 20px; /* Adds spacing between links */
-}
-
-.nav-links li {
-    display: inline; /* Inline styling for list items */
-}
-
-.nav-links a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* White text for links */
-    font-size: 1.1em; /* Slightly larger font for readability */
-    padding: 8px 12px; /* Adds padding for better click area */
-    transition: 0.3s; /* Smooth transition for hover effect */
-}
-
-.nav-links a:hover {
-    background-color: #444; /* Darker background on hover */
-    border-radius: 5px; /* Rounded corners */
-    color: #007bff; /* Bootstrap primary blue for hover effect */
-}
-
-/* Active Link Styling */
-.nav-link.active {
-    color: #007bff; /* Highlight active link in blue */
-    font-weight: bold;
-    border-bottom: 2px solid #007bff; /* Underline effect for active link */
-}
-
-/* Responsive Navbar Styling */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stacks items vertically on small screens */
-        text-align: center; /* Centers text */
-    }
-    .nav-links {
-        flex-direction: column; /* Stacks links vertically */
-        gap: 10px; /* Reduces gap for smaller screens */
-    }
-    
-}
-
-/* Header Section Styling */
+/* Header Styles */
 header {
-    background-color: #222222; /* Slightly darker grey for contrast */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px; /* Smooth rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0; /* Removes default margin */
+.nav-link {
+  position: relative;
 }
 
-/* Main Content Area Styling */
-main {
-    padding: 20px;
-    
-/* Carousel container styling - blending with gray background */
-.carousel.slide {
-  margin-bottom: 3rem;          /* Add space below the carousel */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Slightly darker shadow for contrast */
-  border-radius: 8px;           /* Rounded corners */
-  overflow: hidden;             /* Ensure content doesn't break the rounded corners */
-  background-color: #2a2a2a;    /* Dark gray background to blend with site */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1d4ed8;
+  transition: width 0.3s ease;
 }
 
-/* Carousel inner container */
-.carousel-inner {
-  position: relative;           /* Required for positioning carousel items */
-  width: 100%;                  /* Takes full width of parent */
+.nav-link:hover::after {
+  width: 100%;
 }
 
-/* Carousel item styling */
-.carousel-item {
- 
-  transition: transform 0.6s ease-in-out;  /* Smooth transition between slides */
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.5);
 }
 
-.carousel-item.active {
-  display: block;               /* Only show active slide */
+/* Hero Section */
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
 }
 
-/* Image styling for uniform dimensions */
-.d-block.w-100 {
-  max-height: 500px;            /* Uniform maximum height for all images */
-  width: 100%;                  /* Take full width of container */
-  height: auto;                 /* Maintain aspect ratio */
-  object-fit: contain;          /* Ensure entire image is visible without cropping */
-  background-color: #333;       /* Dark background for images to blend with site theme */
-}
-
-/* Navigation controls styling */
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;           /* Position controls on top of carousel */
-  top: 0;                       /* Align to top */
-  bottom: 0;                    /* Extend to bottom */
-  width: 15%;                   /* Width of click area */
-  opacity: 0.7;                 /* More visible on dark background */
-  transition: opacity 0.15s ease;  /* Smooth hover effect */
-  background: none;             /* Remove background */
-  border: none;                 /* Remove border */
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1;                   /* Fully visible on hover */
-}
-
-.carousel-control-prev {
-  left: 0;                      /* Position at left edge */
-}
-
-.carousel-control-next {
-  right: 0;                     /* Position at right edge */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;        /* Required for dimensions */
-  width: 20px;                  /* Icon width */
-  height: 20px;                 /* Icon height */
-  background-repeat: no-repeat;  /* Prevent icon from repeating */
-  background-position: 50%;     /* Center icon */
-  background-size: 100% 100%;   /* Make icon fill the element */
-  filter: brightness(1.3);      /* Make icons brighter against dark background */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .d-block.w-100 {
-    max-height: 350px;          /* Smaller height on mobile devices */
-  }
-}
-}
-/* Featured Kits Section Styling */
-.featured-kits {
- background-color: #1c1c1c;    /* Match the dark background from screenshot */
-
-}
-
-/* Section heading */
-.featured-kits h2 {
-  font-weight: 700; /* Bold heading */
-  color: white;
-  margin-bottom: 2rem;          /* Space below heading */
-}
-
-/* Product card styling */
+/* Kit Cards */
 .kit-card {
-  height: 100%;                 /* Make all cards take full height of their container */
-  transition: transform 0.3s, box-shadow 0.3s;  /* Smooth hover effects */
-  border-radius: 8px;           /* Rounded corners */
-  overflow: hidden;             /* Ensure content respects border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-  background-color:#1a1a1a ;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .kit-card:hover {
-  transform: translateY(-5px);  /* Slight lift effect on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Image container - critical for uniform height */
-.kit-card-img {
-  height: 300px;                /* Fixed height for all image containers */
-  display: flex;                /* Enable flexbox for centering */
-  align-items: center;          /* Center image vertically */
-  justify-content: center;      /* Center image horizontally */
-  background-color: #333;  
-  overflow: hidden;             /* Hide overflow if image is larger */
+/* Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 8px;
 }
 
-/* Product image styling */
-.card-img-top {
-  max-height: 280px;            /* Slightly smaller than container to prevent touching edges */
-  max-width: 100%;              /* Respect container width */
-  width: auto;                  /* Allow natural width based on height constraint */
-  height: auto;                 /* Maintain aspect ratio */
-  object-fit: contain;          /* Show full image without cropping */
-  transition: transform 0.3s;   /* Smooth zoom effect on hover */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #1d4ed8;
 }
 
-.kit-card:hover .card-img-top {
-  transform: scale(1.05);       /* Subtle zoom on hover */
+.timeline-dot {
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1d4ed8;
 }
 
-/* Card body content */
-.card-body {
-  height: 230px;                /* Fixed height for card content */
-  display: flex;                /* Enable flexbox for layout */
-  flex-direction: column;       /* Stack content vertically */
-  padding: 1.25rem;             /* Uniform padding */
-  background-color: #1a1a1a;    /* Match card background */
+/* Era Cards */
+.era-card {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: #fff;
 }
 
-
-/* Product description */
-.card-text {
-  flex-grow: 1;                 /* Allow text to take available space */
-  font-size: 0.95rem;           /* Consistent text size */
-  color: white; 
-  margin-bottom: 0.75rem;       /* Space below text */
+.era-card:hover {
+  opacity: 0.9;
 }
 
-/* Price display */
-.price {
-  font-size: 1.2rem;            /* Larger font for price */
-  color: #ffffff;               /* Changed from black to white for visibility on dark background */
-  margin-bottom: 1rem;          /* Space below price */
+/* Footer Styles */
+footer {
+  background-color: #111827;
+  color: #ffffff;
 }
 
-/* Call-to-action button */
+footer h3, footer h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* Typography */
+h1, h2, h3, h4, .brand-text {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  color: #1e40af;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+  border-radius: 9999px;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+}
+
 .btn-primary {
-  background-color: #0d6efd;    /* Button color */
-  border: none;                 /* Remove border */
-  padding: 0.5rem 1rem;         /* Button padding */
-  border-radius: 4px;           /* Slightly rounded corners */
-  transition: background-color 0.2s;  /* Smooth color transition */
-  font-weight: 500;             /* Medium weight text */
-  align-self: flex-start;       /* Align button to the left */
+  background-color: #ffffff;
+  color: #1d4ed8;
 }
 
 .btn-primary:hover {
-  background-color: #0b5ed7;    /* Darker shade on hover */
+  background-color: #f3f4f6;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .kit-card-img {
-    height: 250px;              /* Smaller height on medium screens */
+.btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #1d4ed8;
+}
+
+/* Badge Styles */
+.badge {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.badge-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-red {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-green {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-yellow {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+/* Utility Classes */
+.flex-grow {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
   }
   
-  .card-img-top {
-    max-height: 230px;          /* Adjust image height for medium screens */
+  .nav-items {
+    margin-top: 1rem;
   }
   
-  .card-body {
-    height: 250px;              /* Slightly taller to accommodate text wrapping */
-  }
-}
-
-@media (max-width: 576px) {
-  .kit-card-img {
-    height: 220px;              /* Even smaller height on mobile */
+  .kit-image {
+    height: 12rem;
   }
   
-  .card-img-top {
-    max-height: 200px;          /* Adjusted image height for mobile */
+  .timeline-content {
+    flex-direction: column;
+  }
+  
+  .timeline-image {
+    margin-bottom: 1rem;
   }
 }
 
-/* Product Grid Layout */
-.product-grid {
-    display: flex; /* Flexbox layout for alignment */
-    flex-wrap: wrap; /* Allows items to wrap to next row */
-    gap: 20px; /* Spacing between grid items */
-    justify-content: center; /* Centers the grid content */
-    padding: 20px;
-}
-
-/* Individual Product Card Styling */
-.product-card {
-    background-color: #292929; /* Mid-grey card background */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Centers content in the card */
-    padding: 15px;
-    width: 250px; /* Fixed width for consistent sizing */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle glowing effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-}
-
-.product-card:hover {
-    transform: scale(1.05); /* Slight zoom-in effect on hover */
-    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1); /* Bright hover glow */
-}
-
-/* Product Card Image Styling */
-.product-card img {
-    width: 100%; /* Makes images fit the card width */
-    height: 180px; /* Fixed height for consistent sizing */
-    object-fit: cover; /* Ensures images are cropped uniformly */
-    border-radius: 5px; /* Rounded corners for images */
-}
-
-/* Product Card Content Styling */
-.product-card h2 {
-    font-size: 1.2em; /* Larger product titles */
-    margin: 10px 0; /* Spacing below titles */
-}
-
-.product-card p {
-    margin: 5px 0;
-    font-size: 1em; /* Standard paragraph size */
-}
-
-/* Button Styling */
-.product-card a {
-    background-color: #007bff; /* Primary blue for buttons */
-    color: #ffffff; /* White button text */
-    padding: 0.5rem 1rem; /* Adds padding inside buttons */
-    text
-}
-.feedback-btn {
-  background-color: #007BFF; /* Primary blue color */
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
+/* Carousel Controls */
+.carousel-control {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  padding: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.feedback-btn:hover {
-  background-color: #0056b3; /* Darker blue for hover effect */
+.carousel-control:hover {
+  background-color: #d1d5db;
+}
+
+/* Newsletter Form */
+.newsletter-input {
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  width: 100%;
+  color: #111827;
+}
+
+.newsletter-button {
+  background-color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #1d4ed8;
+}
