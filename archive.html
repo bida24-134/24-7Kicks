@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Archive</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-   <header class="bg-white shadow-md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iconic Threads - Kit Archive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="flex items-center mb-4 md:mb-0">
@@ -19,11 +19,11 @@
         </div>
         
         <nav class="flex items-center space-x-1 md:space-x-6">
-          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
-          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Archive</a>
-          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Eras</a>
-          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Stories</a>
-          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
+          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
+          <a href="archive.html" class="nav-link text-blue-700 font-bold px-2 py-1">Archive</a>
+          <a href="eras.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Eras</a>
+          <a href="stories.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Stories</a>
+          <a href="about.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
           
           <div class="relative ml-4">
             <input type="text" placeholder="Search kits..." class="search-input pl-10 pr-4 py-2 border rounded-full text-sm focus:border-blue-500 w-40 md:w-64">
@@ -34,92 +34,329 @@
     </div>
   </header>
 
+  <!-- Archive Hero Section -->
+  <section class="hero-gradient text-white py-10">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold font-['Oswald'] mb-4">KIT ARCHIVE</h2>
+      <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">Explore our collection of iconic football kits through the decades</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-6">
+        <button class="btn btn-primary">All Kits</button>
+        <button class="btn btn-outline">Club Kits</button>
+        <button class="btn btn-outline">National Teams</button>
+        <button class="btn btn-outline">Special Editions</button>
+      </div>
+    </div>
+  </section>
 
-    <main class="product-grid">
-      <div class="product-card">
-        <img src="images/Auxerre 2002 Home.jpeg" alt="Auxerre 2002 Home Kit">
-        <h2>Auxerre 2002 Home Kit</h2>
-        <p>Price: P1,800.00</p>
-        <p>Status: In Stock</p>
-    <button type="button" class="btn btn-primary add-to-cart" data-id="1">
-  <i class="bi bi-cart-plus"></i>
-</button>
+  <!-- Filter Bar -->
+  <section class="bg-white shadow-md py-4">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="flex items-center">
+            <label for="era" class="mr-2 font-bold text-gray-700">Era:</label>
+            <select id="era" class="border rounded-md py-1 px-3">
+              <option value="">All Eras</option>
+              <option value="1970s">1970s</option>
+              <option value="1980s">1980s</option>
+              <option value="1990s">1990s</option>
+              <option value="2000s">2000s</option>
+            </select>
+          </div>
+          <div class="flex items-center">
+            <label for="manufacturer" class="mr-2 font-bold text-gray-700">Brand:</label>
+            <select id="manufacturer" class="border rounded-md py-1 px-3">
+              <option value="">All Brands</option>
+              <option value="adidas">Adidas</option>
+              <option value="nike">Nike</option>
+              <option value="umbro">Umbro</option>
+              <option value="kappa">Kappa</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <label for="sort" class="mr-2 font-bold text-gray-700">Sort By:</label>
+          <select id="sort" class="border rounded-md py-1 px-3">
+            <option value="newest">Year: Newest</option>
+            <option value="oldest">Year: Oldest</option>
+            <option value="name">Name: A-Z</option>
+          </select>
+        </div>
       </div>
-      <div class="product-card">
-        <img src="images/Portugal 06-08.webp" alt="Portugal Retro Kit 2006-2008">
-        <h2>Portugal 2006-2008 Retro Kit</h2>
-        <p>Price: P1,500.00</p>
-        <p>Status: In Stock</p>
-        <button type="button" class="btn btn-primary add-to-cart" data-id="2">
-  <i class="bi bi-cart-plus"></i>
-</button>
-      </div>
-      <div class="product-card">
-        <img src="images/West Germany 1988-90.webp" alt="West Germany Retro Kit">
-        <h2>West Germany 1988-99</h2>
-        <p>Price: P1,600.00</p>
-        <p>Status: Sold Out</p>
-       <button type="button" class="btn btn-primary add-to-cart" data-id="3">
-  <i class="bi bi-cart-plus"></i>
-</button>
-      </div>
-      <!-- New Kits -->
-      <div class="product-card">
-        <img src="images/West Ham United 1999.jpeg" alt="West Ham United 1999 Kit">
-        <h2>West Ham United 1999 Kit</h2>
-        <p>Price: P1,400.00</p>
-        <p>Status: In Stock</p>
-         <button type="button" class="btn btn-primary add-to-cart" data-id="4">
-  <i class="bi bi-cart-plus"></i>
-</button>
-      </div>
-      <div class="product-card">
-        <img src="images/04-05 Real Madrid.webp" alt="2004-2005 Real Madrid Kit">
-        <h2>2004-2005 Real Madrid Kit</h2>
-        <p>Price: P1,700.00</p>
-        <p>Status: Limited Stock</p>
-        <button type="button" class="btn btn-primary add-to-cart" data-id="5"> 
-           <i class="bi bi-cart-plus"></i>
-</button>
-      </div>
-      <div class="product-card">
-        <img src="images/Man United 1995.webp" alt="Manchester United 1995 Kit">
-        <h2>Manchester United 1995 Kit</h2>
-        <p>Price: P1,600.00</p>
-        <p>Status: In Stock</p>
-     <button type="button" class="btn btn-primary add-to-cart" data-id="6">
-  <i class="bi bi-cart-plus"></i>
-</button>
-      </div>
-       <div class="product-card">
-        <img src="images/ACMilanretro.jpg" alt="AC Milan Retro">
-        <h2>AC Milan 07-08</h2>
-        <p>Price: P1,300.00</p>
-        <p>Status: In Stock</p>
-     <button type="button" class="btn btn-primary add-to-cart" data-id="7">
-  <i class="bi bi-cart-plus"></i>
-</button>
-         </div>
-      <div class="product-card">
-        <img src="images/Inter 1996.webp" alt="Inter Milan Away">
-        <h2>Inter Milan 1996 Away</h2>
-        <p>Price: P1,110.00</p>
-        <p>Status: In Stock</p>
-     <button type="button" class="btn btn-primary add-to-cart" data-id="8">
-         <i class="bi bi-cart-plus"></i>
-</button>
+    </div>
+  </section>
 
-   
-     
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<script type="module">
-  import cart from './cart.js';
-  cart();
-</script>
+      <!-- Kit 1 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/Auxerre 2002 Home.jpeg" alt="Auxerre 2002 Home Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">2002-2003</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Auxerre 2002 Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="Auxerre Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Adidas</span>
+          </div>
+          <p class="text-gray-700 mb-4">The classic white design worn during Auxerre's European campaign. Notable for its clean design and blue collar trim, this kit saw the emergence of Djibril Cissé as a top striker in France.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Credit Lyonnais</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 2 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/Portugal 06-08.webp" alt="Portugal 2006-2008 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">2006-2008</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Portugal Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="Portugal Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Nike</span>
+          </div>
+          <p class="text-gray-700 mb-4">Worn during the Euro 2008 campaign by Cristiano Ronaldo. The burgundy design with gold trim became iconic for Portuguese football and represented the golden generation's latter years.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-red-100 text-red-800 px-2 py-1 rounded">Euro 2008</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 3 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/West Germany 1988-90.webp" alt="West Germany 1988-90 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">1988-1990</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">West Germany Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="West Germany Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Adidas</span>
+          </div>
+          <p class="text-gray-700 mb-4">The iconic design worn during their 1990 World Cup victory. The distinctive flag-inspired pattern across the chest has become one of football's most recognizable designs and influenced later kits.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">World Cup Winners</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 4 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/West Ham United 1999.jpeg" alt="West Ham United 1999 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">1999-2000</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">West Ham United Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="West Ham Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Fila</span>
+          </div>
+          <p class="text-gray-700 mb-4">The classic claret and blue kit worn during the 1999-2000 season. This design saw a young Rio Ferdinand and Joe Cole emerging as stars while the club finished in a strong Premier League position.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Dr. Martens</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 5 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/04-05 Real Madrid.webp" alt="Real Madrid 2004-05 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">2004-2005</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Real Madrid Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="Real Madrid Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Adidas</span>
+          </div>
+          <p class="text-gray-700 mb-4">The classic white kit worn during the Galácticos era featuring Zidane, Ronaldo, Beckham, and Figo. The sleek design with navy and gold accents embodied the glamour of the star-studded Madrid squad.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Galácticos Era</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 6 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/Man United 1995.webp" alt="Manchester United 1995 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">1995-1996</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Manchester United Away Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="Manchester United Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Umbro</span>
+          </div>
+          <p class="text-gray-700 mb-4">The infamous grey away kit that was changed at half-time against Southampton when Ferguson claimed players couldn't see each other. Despite its controversial history, it became a cult classic among collectors.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-red-100 text-red-800 px-2 py-1 rounded">Infamous Kit</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 7 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/ACMilanretro.jpg" alt="AC Milan 2007-08 Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">2007-2008</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">AC Milan Home Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="AC Milan Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Adidas</span>
+          </div>
+          <p class="text-gray-700 mb-4">The classic rossoneri stripes worn by Kaká, Pirlo, and Maldini during their Champions League campaign following their 2007 victory. Features the iconic red and black vertical stripes that define Milan's identity.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">bwin</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kit 8 -->
+      <div class="kit-card bg-white rounded-lg overflow-hidden">
+        <div class="relative overflow-hidden h-64">
+          <img src="images/Inter 1996.webp" alt="Inter Milan 1996 Away Kit" class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <span class="text-white font-bold">1996-1997</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Inter Milan Away Kit</h3>
+          <div class="flex items-center mb-3">
+            <img src="/api/placeholder/24/24" alt="Inter Milan Crest" class="w-6 h-6 mr-2">
+            <span class="text-gray-600">Umbro</span>
+          </div>
+          <p class="text-gray-700 mb-4">The iconic blue and white diagonal split design worn by Ronaldo during his debut season at Inter. This distinctive kit is remembered for its bold asymmetrical design that broke traditional kit conventions.</p>
+          <div class="flex justify-between items-center">
+            <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+            <span class="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Pirelli</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Pagination -->
+    <div class="flex justify-center mt-12">
+      <nav aria-label="Page navigation">
+        <ul class="flex space-x-2">
+          <li><a href="#" class="bg-white border px-4 py-2 rounded hover:bg-gray-100">Previous</a></li>
+          <li><a href="#" class="bg-blue-700 text-white px-4 py-2 rounded">1</a></li>
+          <li><a href="#" class="bg-white border px-4 py-2 rounded hover:bg-gray-100">2</a></li>
+          <li><a href="#" class="bg-white border px-4 py-2 rounded hover:bg-gray-100">3</a></li>
+          <li><a href="#" class="bg-white border px-4 py-2 rounded hover:bg-gray-100">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
 
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold font-['Oswald'] mb-4">ICONIC THREADS</h3>
+          <p class="text-gray-400">Preserving football history through the jerseys that defined eras and tournaments.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">ARCHIVE</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">By Club</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By National Team</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By Tournament</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By Manufacturer</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">RESOURCES</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Kit Identification Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Care & Preservation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Historical Context</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Submit a Kit</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">NEWSLETTER</h4>
+          <p class="text-gray-400 mb-4">Subscribe to receive updates on new additions to our archive.</p>
+          <div class="flex">
+            <input type="email" placeholder="Your email" class="newsletter-input rounded-l text-gray-900 w-full">
+            <button class="newsletter-button rounded-r hover:bg-blue-700"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+        <p>&copy; 2023 Iconic Threads. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Filter functionality
+      const eraSelect = document.getElementById('era');
+      const manufacturerSelect = document.getElementById('manufacturer');
+      const sortSelect = document.getElementById('sort');
+      
+      function applyFilters() {
+        // Filter logic would go here
+        console.log(`Filtering by: ${eraSelect.value}, ${manufacturerSelect.value}, ${sortSelect.value}`);
+      }
+      
+      eraSelect.addEventListener('change', applyFilters);
+      manufacturerSelect.addEventListener('change', applyFilters);
+      sortSelect.addEventListener('change', applyFilters);
+      
+      // Search functionality
+      const searchInput = document.querySelector('.search-input');
+      searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+          alert(`Searching for: ${this.value}`);
+          this.value = '';
+        }
+      });
+    });
+  </script>
+</body>
 </html>
