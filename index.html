@@ -14,206 +14,252 @@
 
 </head>
 <body>
+<!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <i class="fas fa-tshirt text-3xl text-blue-700 mr-3"></i>
+          <h1 class="text-3xl font-bold font-['Oswald'] text-blue-800">ICONIC THREADS</h1>
+        </div>
+        
+        <nav class="flex items-center space-x-1 md:space-x-6">
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Archive</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Eras</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Stories</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
+          <div class="relative ml-4">
+            <input type="text" placeholder="Search kits..." class="search-input pl-10 pr-4 py-2 border rounded-full text-sm focus:border-blue-500 w-40 md:w-64">
+            <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+   <!-- Hero Section -->
+  <section class="hero-gradient text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold font-['Oswald'] mb-6">FOOTBALL KIT ARCHIVE</h2>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Preserving the history of football through the jerseys that defined eras</p>
+      <div class="flex justify-center space-x-4">
+        <button class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">Explore Archive</button>
+        <button class="border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-blue-700 transition">Learn More</button>
+      </div>
+    </div>
+  </section>
+   <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-12">
+    <!-- Featured Kits -->
+    <section class="mb-16">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold font-['Oswald'] text-blue-800">FEATURED KITS</h2>
+        <div class="flex space-x-2">
+          <button id="prev-kit" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300"><i class="fas fa-chevron-left"></i></button>
+          <button id="next-kit" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="kit-carousel">
+        <!-- Kit 1 -->
+        <div class="kit-card bg-white rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://i.imgur.com/JQZQvqj.jpg" alt="Liverpool 96-98 Home Kit" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <span class="text-white font-bold">1996-1998</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Liverpool FC Home Kit</h3>
+            <div class="flex items-center mb-3">
+              <img src="https://i.imgur.com/9e9vXyL.png" alt="Liverpool Crest" class="w-8 h-8 mr-2">
+              <span class="text-gray-600">Adidas</span>
+            </div>
+            <p class="text-gray-700 mb-4">The iconic white pinstripe design worn during the 1996-97 and 1997-98 seasons. This kit saw Liverpool reach the UEFA Cup Winners' Cup semifinal in 1997.</p>
+            <div class="flex justify-between items-center">
+              <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+              <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Carlsberg sponsor</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Kit 2 -->
+        <div class="kit-card bg-white rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://i.imgur.com/vVJQzQq.jpg" alt="France 98 Home Kit" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <span class="text-white font-bold">1998</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">France Home Kit</h3>
+            <div class="flex items-center mb-3">
+              <img src="https://i.imgur.com/5JQZQvq.png" alt="France Crest" class="w-8 h-8 mr-2">
+              <span class="text-gray-600">Nike</span>
+            </div>
+            <p class="text-gray-700 mb-4">The legendary kit worn by France when they won their first World Cup on home soil in 1998. Zidane's iconic performance in this kit made it legendary.</p>
+            <div class="flex justify-between items-center">
+              <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+              <span class="text-sm bg-red-100 text-red-800 px-2 py-1 rounded">World Cup Winners</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Kit 3 -->
+        <div class="kit-card bg-white rounded-lg overflow-hidden">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://i.imgur.com/JQZQvqk.jpg" alt="Manchester United 98-99 Home Kit" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <span class="text-white font-bold">1998-1999</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Manchester United Home Kit</h3>
+            <div class="flex items-center mb-3">
+              <img src="https://i.imgur.com/9e9vXyM.png" alt="Man Utd Crest" class="w-8 h-8 mr-2">
+              <span class="text-gray-600">Umbro</span>
+            </div>
+            <p class="text-gray-700 mb-4">The famous treble-winning kit from 1998-99 season when United won the Premier League, FA Cup, and Champions League in dramatic fashion.</p>
+            <div class="flex justify-between items-center">
+              <button class="text-blue-600 font-bold hover:text-blue-800">View Details</button>
+              <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Treble Winners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Historical Timeline -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold font-['Oswald'] text-blue-800 mb-8">KIT EVOLUTION TIMELINE</h2>
+      
+      <div class="relative pl-8">
+        <!-- Timeline Item 1 -->
+        <div class="mb-12 timeline-item relative">
+          <div class="timeline-dot"></div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/3 mb-4 md:mb-0">
+                <img src="https://i.imgur.com/JQZQvql.jpg" alt="Brazil 1970 Kit" class="w-full rounded">
+              </div>
+              <div class="md:w-2/3 md:pl-6">
+                <h3 class="text-xl font-bold mb-2">Brazil 1970 - The Birth of Modern Football Kits</h3>
+                <div class="flex items-center mb-3">
+                  <span class="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded mr-2">World Cup Winners</span>
+                  <span class="text-gray-600">Adidas</span>
+                </div>
+                <p class="text-gray-700 mb-4">The iconic yellow kit with green trim that Brazil wore during their triumphant 1970 World Cup campaign in Mexico. This kit became synonymous with Jairzinho, Pelé, and the beautiful game at its finest. The three-stripe design by Adidas set the standard for future football kits.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">First Adidas Brazil kit</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Permanent numbers</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">V-neck collar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Timeline Item 2 -->
+        <div class="mb-12 timeline-item relative">
+          <div class="timeline-dot"></div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/3 mb-4 md:mb-0">
+                <img src="https://i.imgur.com/vVJQzQr.jpg" alt="AC Milan 1988-89 Kit" class="w-full rounded">
+              </div>
+              <div class="md:w-2/3 md:pl-6">
+                <h3 class="text-xl font-bold mb-2">AC Milan 1988-89 - The Birth of Modern Sponsorship</h3>
+                <div class="flex items-center mb-3">
+                  <span class="text-sm bg-red-100 text-red-800 px-2 py-1 rounded mr-2">European Cup Winners</span>
+                  <span class="text-gray-600">Kappa</span>
+                </div>
+                <p class="text-gray-700 mb-4">The revolutionary red and black stripes with Mediolanum sponsorship that AC Milan wore during their dominant 1988-89 season. This kit saw the emergence of the Dutch trio (Gullit, Van Basten, Rijkaard) and marked the beginning of modern football sponsorship deals. The tight-fitting design by Kappa was a departure from traditional loose kits.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">First tight-fit kit</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Large sponsor logo</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Kappa branding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Timeline Item 3 -->
+        <div class="mb-12 timeline-item relative">
+          <div class="timeline-dot"></div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/3 mb-4 md:mb-0">
+                <img src="https://i.imgur.com/JQZQvqm.jpg" alt="Barcelona 2008-09 Kit" class="w-full rounded">
+              </div>
+              <div class="md:w-2/3 md:pl-6">
+                <h3 class="text-xl font-bold mb-2">Barcelona 2008-09 - The Peak of Tiki-Taka</h3>
+                <div class="flex items-center mb-3">
+                  <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded mr-2">Treble Winners</span>
+                  <span class="text-gray-600">Nike</span>
+                </div>
+                <p class="text-gray-700 mb-4">The classic blaugrana stripes with UNICEF sponsorship that Barcelona wore during their historic 2008-09 treble-winning season. This kit was worn by Messi, Xavi, and Iniesta at the peak of their powers, playing Pep Guardiola's revolutionary tiki-taka football. The UNICEF sponsorship marked a shift toward social responsibility in football.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">First UNICEF sponsorship</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Mesh side panels</span>
+                  <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Vapor template</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Kit Search by Era -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold font-['Oswald'] text-blue-800 mb-8">EXPLORE BY ERA</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-blue-600 text-white p-6 rounded-lg hover:bg-blue-700 transition cursor-pointer">
+          <h3 class="text-xl font-bold mb-2">1970s</h3>
+          <p class="text-sm opacity-80">The birth of modern football kits</p>
+          <div class="mt-4 text-right">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        
+        <div class="bg-red-600 text-white p-6 rounded-lg hover:bg-red-700 transition cursor-pointer">
+          <h3 class="text-xl font-bold mb-2">1980s</h3>
+          <p class="text-sm opacity-80">Sponsorships and tighter fits</p>
+          <div class="mt-4 text-right">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        
+        <div class="bg-green-600 text-white p-6 rounded-lg hover:bg-green-700 transition cursor-pointer">
+          <h3 class="text-xl font-bold mb-2">1990s</h3>
+          <p class="text-sm opacity-80">Colorful designs and new materials</p>
+          <div class="mt-4 text-right">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        
+        <div class="bg-purple-600 text-white p-6 rounded-lg hover:bg-purple-700 transition cursor-pointer">
+          <h3 class="text-xl font-bold mb-2">2000s</h3>
+          <p class="text-sm opacity-80">Technical fabrics and global brands</p>
+          <div class="mt-4 text-right">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<header>
-<h1 style="text-align:center;">Iconic Threads Football Kit Archive</h1>
-<nav class="navbar navbar-expand-lg bg-light">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Iconic Threads</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" aria-current="page" href="index.html">Home</a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-Products
-</a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" href="Product.html">All Kits</a></li>
-<li><a class="dropdown-item" href="#">New Arrivals</a></li>
-<li><a class="dropdown-item" href="#">Best Sellers</a></li>
-</ul>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">About Us</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact Us</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-
-</header>
-
-<main>
-<div id="carouselExample" class="carousel slide">
-<div class="carousel-inner">
-<div class="carousel-item active" data-mdb-interval="3000">
-<img src="images/Liverpool 96_98 Model.jpg" class="d-block w-100" alt="Liverpool 96-98 Model">
-</div>
-<div class="carousel-item" data-mdb-interval="3000">
-<img src="images/England 98 Model.jpg" class="d-block w-100" alt="England 98 Model">
-</div>
-<div class="carousel-item" data-mdb-interval="3000">
-<img src="images/France 98 Model.jpg" class="d-block w-100" alt="France 98 Model">
-</div>
-<div class="carousel-item" data-mdb-interval="3000">
-<img src="images/Dortmund 93-95 Model.jpg" class="d-block w-100" alt="Dortmund 93-95 Model">
-</div>
-<div class="carousel-item" data-mdb-interval="3000">
-<img src="images/Bayern 99 Model.jpg" class="d-block w-100" alt="Bayern 99 Model">
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
-</div>
-
-<section class="main-content">
-<!-- Featured Kits Section -->
-<div class="featured-kits container-fluid py-5">
-<h2 class="text-center mb-5">Featured Kits</h2>
-<div class="row gy-4">
-<div class="col-lg-4 col-md-6">
-<div class="card kit-card">
-<div class="kit-card-img">
-<img src="images/Portugal 06-08.webp" class="card-img-top" alt="Portugal 2006-2008 Kit">
-</div>
-<div class="card-body">
-<h5 class="card-text">Celebrate Portugal's golden era with this timeless retro kit.</h5>
-<p class="price fw-bold">P1,500.00</p>
-<a href="Product.html" class="btn btn-primary">View Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="card kit-card">
-<div class="kit-card-img">
-<img src="images/Auxerre 2002 Home.jpeg" class="card-img-top" alt="Auxerre 2002 Home Kit">
-</div>
-<div class="card-body">
-<h5 class="card-text">A must-have for collectors, showcasing Auxerre’s iconic design.</h5>
-<p class="price fw-bold">P1,800.00</p>
-<a href="Product.html" class="btn btn-primary">View Details</a>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="card kit-card">
-<div class="kit-card-img">
-<img src="images/West Germany 1988-90.webp" class="card-img-top" alt="West Germany 1988-1990 Kit">
-</div>
-<div class="card-body">
-<h5 class="card-text">Relive the legacy of West Germany's historic moments on the field.</h5>
-<p class="price fw-bold">P1,600.00</p>
-<a href="Product.html" class="btn btn-primary">View Details</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 
-<!-- Why Choose Us Section -->
-<div class="container py-5">
-<h2 class="text-center">Why Choose Us?</h2>
-<div class="row">
-<div class="col-md-6">
-<div class="accordion" id="accordionLeft">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingOne">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-<i class="fas fa-certificate me-2"></i> 100% Authentic Products
-</button>
-</h2>
-<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionLeft">
-<div class="accordion-body">
-Every item we sell undergoes a thorough quality check to ensure it's authentic and meets our high standards.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingTwo">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-<i class="fas fa-shipping-fast me-2"></i> Fast Global Shipping
-</button>
-</h2>
-<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionLeft">
-<div class="accordion-body">
-We offer speedy delivery options to customers worldwide, so you get your products when you need them.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingThree">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-<i class="fas fa-ruler-combined me-2"></i> 
-Detailed Product Measurements
-</button>
-</h2>
-<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionLeft">
-<div class="accordion-body">
-Need precise measurements? Reach out to us, and we'll provide all the details you require.
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="accordion" id="accordionRight">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingFour">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-<i class="fas fa-star me-2"></i> Rated Excellent
-</button>
-</h2>
-<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRight">
-<div class="accordion-body">
-Our customers love us! Check out the reviews to see what they say.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingFive">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-<i class="fas fa-question-circle me-2"></i> Got Questions?
-</button>
-</h2>
-<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionRight">
-<div class="accordion-body">
-Have a query about a product? Our team is here to help—just ask!
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingSix">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-<i class="fas fa-hand-holding-usd me-2"></i> Sell to Us
-</button>
-</h2>
-<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionRight">
-<div class="accordion-body">
-Got items to sell? We're always looking to expand our collection!
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-                
+
+
+
+
+
+
+         
             
                  
       
@@ -221,14 +267,100 @@ Got items to sell? We're always looking to expand our collection!
 
  
 </main>
-<footer class="bg-dark text-center text-white py-3">
-  <p>&copy; 2025 Iconic Threads. All rights reserved.</p>
-  <button class="feedback-btn">Give Feedback</button>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold font-['Oswald'] mb-4">ICONIC THREADS</h3>
+          <p class="text-gray-400">Preserving football history through the jerseys that defined eras and tournaments.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">ARCHIVE</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">By Club</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By National Team</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By Tournament</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">By Manufacturer</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">RESOURCES</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Kit Identification Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Care & Preservation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Historical Context</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Submit a Kit</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">NEWSLETTER</h4>
+          <p class="text-gray-400 mb-4">Subscribe to receive updates on new additions to our archive.</p>
+          <div class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l text-gray-900 w-full">
+            <button class="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+        <p>&copy; 2023 Iconic Threads. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+ <script>
+    // Simple carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const kitCarousel = document.getElementById('kit-carousel');
+      const prevBtn = document.getElementById('prev-kit');
+      const nextBtn = document.getElementById('next-kit');
+      const kits = Array.from(kitCarousel.children);
+      let currentIndex = 0;
+      
+      function updateCarousel() {
+        kits.forEach((kit, index) => {
+          kit.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
+        });
+      }
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < kits.length - 3) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+      
+      // Initialize
+      updateCarousel();
+      
+      // Search functionality
+      const searchInput = document.querySelector('.search-input');
+      searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+          alert(`Searching for: ${this.value}`);
+          this.value = '';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
