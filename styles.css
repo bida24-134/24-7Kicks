@@ -254,16 +254,5 @@ h2 {
 .newsletter-button:hover {
   background-color: #1d4ed8;
 }
-/* In your custom.css file */
-    #kit-carousel .kit-card {
-      width: auto; /* Or a percentage like 100% */
-      min-width: 0;
-    }
 
-    @media (max-width: 768px) { /* Adjust the breakpoint as needed */
-      #kit-carousel {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-    }
 
