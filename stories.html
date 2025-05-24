@@ -7,37 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .hero-gradient {
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    }
-    .story-card:hover .story-image {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
-    }
-    .story-image {
-      transition: transform 0.3s ease;
-    }
-    .timeline-dot {
-      position: absolute;
-      left: -20px;
-      top: 24px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: #1e40af;
-      border: 3px solid #ffffff;
-    }
-    .btn {
-      @apply px-6 py-3 rounded-full font-bold transition;
-    }
-    .btn-primary {
-      @apply bg-white text-blue-700 hover:bg-gray-100;
-    }
-    .btn-outline {
-      @apply border-2 border-white text-white hover:bg-white hover:text-blue-700;
-    }
-  </style>
+  
+     
 </head>
 <body class="min-h-screen flex flex-col bg-gray-100">
   <!-- Header -->
@@ -49,12 +20,12 @@
           <h1 class="text-3xl font-bold font-['Oswald'] text-blue-800">ICONIC THREADS</h1>
         </div>
         
-        <nav class="flex items-center space-x-1 md:space-x-6">
-          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
-          <a href="archive.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Archive</a>
-          <a href="request" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Request</a>
-          <a href="about.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
-          
+         <nav class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+  <a href="index.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
+  <a href="archive.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Archive</a>
+  <a href="stories.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Stories</a>
+  <a href="about.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
+</nav>
           <div class="relative ml-4">
             <input type="text" placeholder="Search stories..." class="search-input pl-10 pr-4 py-2 border rounded-full text-sm focus:border-blue-500 w-40 md:w-64">
             <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
