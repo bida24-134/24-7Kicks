@@ -18,13 +18,16 @@ header {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 768px) 
-  #mobile-menu  {
+@media (min-width: 768px) {
+  #mobile-menu {
     display: none;
   }
-@media (max-width: 768px)
-  #desktop-menu{
-  display:none;
+}
+
+@media (max-width: 767px) {
+  #desktop-menu {
+    display: none;
+  }
 }
 .nav-link {
   position: relative;
