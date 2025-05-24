@@ -37,7 +37,7 @@
      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Preserving the history of football through the jerseys that defined eras</p>
       <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <a href="archive.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">Explore Archive</a>
-        <a href="about.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">Learn More</a>
+        <a href="about.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">Learn More About Us</a>
       </div>
     </div>
         
@@ -235,49 +235,14 @@
         <p>&copy; 2023 Iconic Threads. All rights reserved.</p>
       </div>
     </div>
+    <!-- Share Your Story Section -->
+  <section class="bg-blue-800 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Give feedback</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Want to help us improve the archive? Click the button below.</p>
+      <a href="feedback.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition"> Give Feedback</a>
+    </div>
+  </section>
   </footer>
 
-  <script>
-    // Simple carousel functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const kitCarousel = document.getElementById('kit-carousel');
-      const prevBtn = document.getElementById('prev-kit');
-      const nextBtn = document.getElementById('next-kit');
-      const kits = Array.from(kitCarousel.children);
-      let currentIndex = 0;
-      
-      function updateCarousel() {
-        kits.forEach((kit, index) => {
-          kit.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
-        });
-      }
-      
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
-      
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex < kits.length - 3) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
-      
-      // Initialize
-      updateCarousel();
-      
-      // Search functionality
-      const searchInput = document.querySelector('.search-input');
-      searchInput.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-          alert(`Searching for: ${this.value}`);
-          this.value = '';
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+ 
