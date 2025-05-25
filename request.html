@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iconic Threads - Kit Stories</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS for navbar and footer only -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap');
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa);
+    }
+    
+    .story-image {
+      transition: transform 0.3s ease;
+    }
+    
+    .story-card:hover .story-image {
+      transform: scale(1.05);
+    }
+    
+    .nav-link:hover {
+      color: #1d4ed8 !important;
+    }
+    
+    .oswald-font {
+      font-family: 'Oswald', sans-serif;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100" style="background-color: #f3f4f6;">
+  <!-- Header with Tailwind -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <i class="fas fa-tshirt text-3xl text-blue-700 mr-3"></i>
+          <h1 class="text-3xl font-bold font-['Oswald'] text-blue-800">ICONIC THREADS</h1>
+        </div>
+        
+        <nav class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+          <a href="index.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Home</a>
+          <a href="archive.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Archive</a>
+          <a href="stories.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">Stories</a>
+          <a href="about.html" class="nav-link text-gray-700 hover:text-blue-700 px-2 py-1">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <!-- Stories Hero Section with Bootstrap -->
+  <section class="hero-gradient text-white py-5">
+    <div class="container text-center">
+      <h2 class="display-3 fw-bold oswald-font mb-4">KIT STORIES</h2>
+      <p class="lead fs-4 mb-4">The legendary teams, moments, and achievements behind football's most iconic jerseys</p>
+    </div>
+  </section>
+
+  <!-- Main Content with Bootstrap -->
+  <main class="flex-grow-1">
+    <div class="container py-5">
+      <!-- Featured Story -->
+      <section class="mb-5">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="images/Manchester United 98-99.jpg" alt="Manchester United 1998-99 Treble Winners" class="img-fluid h-100 w-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-4 p-md-5">
+                <span class="badge bg-danger-subtle text-danger-emphasis mb-2">LEGENDARY SEASON</span>
+                <h2 class="card-title h3 fw-bold mb-3">The Impossible Treble: Manchester United's 1999 Triumph</h2>
+                <p class="card-text text-muted mb-3">The 1998-99 Manchester United home kit, manufactured by Umbro with the iconic Sharp sponsorship, witnessed one of football's greatest achievements. Sir Alex Ferguson's men completed an unprecedented treble, winning the Premier League, FA Cup, and UEFA Champions League in a single season.</p>
+                <p class="card-text text-muted mb-3">The Premier League race went down to the final day, with United edging Arsenal by a single point. In the FA Cup final, they defeated Newcastle United 2-0. But it was the Champions League final that cemented this team in football folklore.</p>
+                <p class="card-text text-muted">Trailing 1-0 to Bayern Munich in the 90th minute, United scored twice in injury time through substitutes Teddy Sheringham and Ole Gunnar Solskjaer, creating what many consider the most dramatic comeback in football history. This simple red Umbro design became immortalized as the kit worn during football's most improbable turnaround.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Story Grid -->
+      <section class="mb-5">
+        <h2 class="h3 fw-bold oswald-font text-primary mb-4">MORE ICONIC STORIES</h2>
+        
+        <div class="row g-4">
+          <!-- Story 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/France 98 Model.jpg" alt="France 1998 World Cup" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">1998</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-primary-subtle text-primary-emphasis mb-2">WORLD CHAMPIONS</span>
+                <h3 class="card-title h5 fw-bold mb-2">France's First World Cup Glory</h3>
+                <p class="card-text text-muted">The French national team's 1998 home kit by Nike became synonymous with their first-ever World Cup victory on home soil. Led by captain Didier Deschamps and the brilliant Zinedine Zidane, Les Bleus dominated the tournament, culminating in a 3-0 final victory over Brazil. Zidane's two headers in the final while wearing this iconic blue jersey created one of the World Cup's most memorable moments.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/West Germany 1988-90.webp" alt="West Germany 1990 World Cup" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">1990</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-success-subtle text-success-emphasis mb-2">REUNIFICATION</span>
+                <h3 class="card-title h5 fw-bold mb-2">West Germany's Final Triumph</h3>
+                <p class="card-text text-muted">West Germany's iconic 1990 home kit with its distinctive flag-inspired chest design became the last jersey worn before German reunification. Led by captain Lothar Matthäus, the team dominated the 1990 World Cup in Italy, defeating Argentina 1-0 in the final through Andreas Brehme's penalty. The jersey symbolizes not just sporting success but a pivotal moment in German history.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/Liverpool 96_98 Model.jpg" alt="Liverpool 1996-98 Home Kit" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">1996-1998</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-warning-subtle text-warning-emphasis mb-2">TRANSITION ERA</span>
+                <h3 class="card-title h5 fw-bold mb-2">Liverpool's Spice Boys Era</h3>
+                <p class="card-text text-muted">Liverpool's 1996-98 home kit with its distinctive white pinstripes became associated with the "Spice Boys" era. Despite featuring talents like Robbie Fowler, Steve McManaman, and Michael Owen, this team became known as much for their off-field personas as their playing style. While they reached the 1996 FA Cup final in this kit, their notorious pre-match white suits overshadowed their performance.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/AC Milan 88-89.jpg" alt="AC Milan 1988-89 Kit" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">1988-1989</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-danger-subtle text-danger-emphasis mb-2">EUROPEAN DOMINANCE</span>
+                <h3 class="card-title h5 fw-bold mb-2">Sacchi's Milan Revolution</h3>
+                <p class="card-text text-muted">AC Milan's 1988-89 home kit marked the beginning of a golden era under Arrigo Sacchi. The legendary Dutch trio of Ruud Gullit, Marco van Basten, and Frank Rijkaard dominated European football in this iconic red and black striped jersey. The team demolished Steaua Bucharest 4-0 in the European Cup final, with van Basten and Gullit both scoring twice while wearing this Kappa-manufactured classic.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/Man United 1995.webp" alt="Manchester United 1995 Away Kit" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">1995-1996</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">INFAMOUS MOMENT</span>
+                <h3 class="card-title h5 fw-bold mb-2">The Kit That "Couldn't Be Seen"</h3>
+                <p class="card-text text-muted">Manchester United's grey away kit from 1995-96 became infamous when Sir Alex Ferguson ordered his team to change outfits at half-time against Southampton, claiming players couldn't see each other. United were losing 3-0 at the break, switched to their blue and white third kit, but still lost 3-1. The grey kit was never worn again, creating one of football's most memorable kit controversies.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm story-card">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="images/Barcelona 08-09.jpg" alt="Barcelona 2008-09 Home Kit" class="story-image img-fluid w-100 h-100" style="object-fit: cover;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <span class="text-white fw-bold">2008-2009</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-primary-subtle text-primary-emphasis mb-2">TACTICAL REVOLUTION</span>
+                <h3 class="card-title h5 fw-bold mb-2">Pep's Tiki-Taka Revolution</h3>
+                <p class="card-text text-muted">Barcelona's 2008-09 home kit witnessed the birth of Pep Guardiola's tiki-taka revolution. In his first season as manager, Guardiola led Barça to an unprecedented treble: La Liga, Copa del Rey, and Champions League. The team featuring Lionel Messi, Xavi, and Iniesta defined a new era of possession football, culminating in a commanding 2-0 victory over Manchester United in the Champions League final.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Story Spotlight -->
+      <section class="mb-5">
+        <h2 class="h3 fw-bold oswald-font text-primary mb-4">SPOTLIGHT: BRAZIL 1970</h2>
+        
+        <div class="card shadow-sm">
+          <div class="card-body p-4 p-md-5">
+            <div class="row align-items-center mb-4">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <img src="images/brazil 1970.jpg" alt="Brazil 1970 Team" class="img-fluid rounded">
+              </div>
+              <div class="col-md-8">
+                <h3 class="h4 fw-bold mb-3">The Greatest Team Ever Assembled</h3>
+                <p class="text-muted mb-3">The 1970 Brazil national team is widely regarded as the greatest football team ever assembled. Wearing their iconic yellow Adidas jerseys with green trim, they revolutionized football with their attacking flair and technical brilliance. The team featured legends like Pelé, Jairzinho, Tostão, Rivellino, and Carlos Alberto.</p>
+                <p class="text-muted">Brazil won all six matches at the World Cup in Mexico, scoring 19 goals and playing with a freedom and creativity that redefined the sport. The tournament culminated in a 4-1 victory over Italy in the final, featuring Carlos Alberto's iconic team goal that epitomized Brazil's beautiful style of play.</p>
+              </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="pt-3">
+              <h4 class="h5 fw-bold mb-3">The Iconic Kit That Defined an Era</h4>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <p class="text-muted mb-3">The 1970 Brazil kit embodied simplicity and elegance at a time when football jerseys were beginning to evolve. The vibrant yellow shirt with green trim and blue shorts became the defining image of Brazilian football's golden age. This was the first Brazil World Cup kit manufactured by Adidas, featuring their iconic three stripes on the sleeves.</p>
+                  <p class="text-muted">The kit's design focused on functionality in Mexico's high altitude and heat, using lightweight materials that allowed players to showcase their technical skills. The number 10 shirt worn by Pelé in this tournament became the most famous jersey number in football history.</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted mb-3">What made this kit truly special was not just its design but the style of football played while wearing it. The 1970 team's performances elevated the yellow jersey to mythical status, creating an expectation that any team wearing these colors should play with creativity, flair, and joy.</p>
+                  <p class="text-muted">This kit has influenced Brazilian designs ever since, with each new generation measured against the standard set by the 1970 team. Even today, when Brazil unveils a new kit, comparisons are inevitably made to this iconic design that witnessed football at its most beautiful.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer with Tailwind -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold font-['Oswald'] mb-4">ICONIC THREADS</h3>
+          <p class="text-gray-400">Preserving football history through the jerseys that defined eras and tournaments.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4">NEWSLETTER</h4>
+          <p class="text-gray-400 mb-4">Subscribe to receive updates on new additions to our archive.</p>
+          <div class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l text-gray-900 w-full">
+            <button class="bg-blue-600 px-4 py-2 rounded-r hover:bg-blue-700"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+        <p>&copy; 2023 Iconic Threads. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
