@@ -267,31 +267,4 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Filter functionality
-      const eraSelect = document.getElementById('era');
-      const manufacturerSelect = document.getElementById('manufacturer');
-      const sortSelect = document.getElementById('sort');
-      
-      function applyFilters() {
-        // Filter logic would go here
-        console.log(`Filtering by: ${eraSelect.value}, ${manufacturerSelect.value}, ${sortSelect.value}`);
-      }
-      
-      eraSelect.addEventListener('change', applyFilters);
-      manufacturerSelect.addEventListener('change', applyFilters);
-      sortSelect.addEventListener('change', applyFilters);
-      
-      // Search functionality
-      const searchInput = document.querySelector('.search-input');
-      searchInput.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-          alert(`Searching for: ${this.value}`);
-          this.value = '';
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+  
