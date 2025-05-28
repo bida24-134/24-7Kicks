@@ -265,5 +265,77 @@ h2 {
 .newsletter-button:hover {
   background-color: #1d4ed8;
 }
+ .hero-gradient {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    }
+    
+    .story-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .story-image-container {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 60%; /* 5:3 aspect ratio */
+    }
+    
+    .story-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .story-card:hover .story-image {
+      transform: scale(1.05);
+    }
+    
+    .story-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    
+    .story-text {
+      flex: 1;
+    }
+    
+    .nav-link:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+      border-radius: 0.25rem;
+    }
+    
+    @media (max-width: 768px) {
+      .story-image-container {
+        padding-bottom: 50%; /* Slightly less height on mobile */
+      }
+      
+      .story-content {
+        padding: 1rem;
+      }
+    }
+    
+    .featured-story-image {
+      aspect-ratio: 16/10;
+      object-fit: cover;
+    }
+    
+    @media (max-width: 768px) {
+      .featured-story-image {
+        aspect-ratio: 4/3;
+      }
+    }
 
 
